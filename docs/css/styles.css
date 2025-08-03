@@ -77,12 +77,14 @@ body {
   opacity: 0;
   transition: opacity 0.7s ease-in-out;
   z-index: 0;
+  display: none;
 
 }
 
 .carrusel img.active {
   opacity: 1;
   z-index: 1;
+  display: none;
 }
 
 /* INICIO / BIENVENIDA */
@@ -165,9 +167,6 @@ body {
     max-width: 98vw;
   }
 }
-
-/* Se conservan el resto de estilos existentes */
-
 
 /* NOTA LO SIGUIENTE ES PARA PROBAR UN SUB MENU */
 
