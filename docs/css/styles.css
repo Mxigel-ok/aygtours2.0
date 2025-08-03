@@ -1,0 +1,313 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url('https://aygtours.com/wp-content/uploads/2022/09/BUSES-FONDO-CLARO.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* NUESTRA EMPRESA / ESTILOS  */
+.empresa-section {
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: self-start;
+    flex-wrap: wrap;
+      padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+    
+}
+
+.empresa-texto {
+  flex: 1;
+  min-width: 300px;
+  color: #ffffff;
+}
+
+.empresa-texto h2 {
+    color: #65b904;
+    margin-bottom: 20px;
+    font-size: 50px;
+    padding-inline: 65px;
+}
+
+.empresa-texto p {
+    font-size: 20px;
+}
+.empresa-carrusel {
+  flex: 1;
+  min-width: 300px;
+}
+
+.empresa-video{
+  flex: 100px ;
+  position: relative;
+  padding-bottom: 50%;
+  height: 100px;
+}
+
+.empresa-video iframe {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 90%;
+  height: 50%;
+  border: none;
+}
+
+.carrusel {
+  width: 1200px;
+  max-width: 600px;  
+  height: 500px;      
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 0 auto;   
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.carrusel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
+  z-index: 0;
+
+}
+
+.carrusel img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* INICIO / BIENVENIDA */
+
+.bienvenida-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.bienvenida-texto {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.bienvenida-texto h2 {
+  font-size: 2.5em;
+  color: #81d742;
+  margin-bottom: 15px;
+}
+
+.bienvenida-texto p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 900px) {
+  .bienvenida-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bienvenida-texto, .bienvenida-carrusel {
+    max-width: 100%;
+  }
+}
+
+/* Se conservan el resto de estilos existentes */
+
+
+/* NOTA LO SIGUIENTE ES PARA PROBAR UN SUB MENU */
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: rgb(255, 255, 255);
+  min-width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.dropdown li a {
+  color: black;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.dropdown li a:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+header h2 {
+  margin: 5px 0 0;
+  font-weight: normal;
+  color: #81d742;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  background: #111;
+  padding: 10px 0;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover,
+nav ul li a.current {
+  color: #81d742;
+}
+
+.contenido,
+.slider {
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.contenido h2,
+.slider h2 {
+  color: #81d742;
+  margin-bottom: 20px;
+}
+
+.contenido p,
+.slider p {
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: auto;
+}
+
+.slider img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+}
+
+.slider p a {
+  color: #81d742;
+  text-decoration: underline;
+}
+
+/* Responsive para menú */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+
+/* FORMULARIO DE CONTACTO - ESTILO PERSONALIZADO */
+.contenido form {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(78,84,200,0.10);
+  max-width: 400px;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contenido label {
+  font-weight: 600;
+  color: #4e54c8;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.contenido input,
+.contenido select {
+  padding: 12px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7f8fa;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.contenido input:focus,
+.contenido select:focus {
+  border-color: #4e54c8;
+  box-shadow: 0 0 0 2px #8f94fb44;
+}
+
+.contenido button[type="submit"] {
+  background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(78,84,200,0.08);
+}
+
+.contenido button[type="submit"]:hover {
+  background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+}

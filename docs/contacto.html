@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A&G TOURS | Contacto</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/index.html">A&G TOURS</a></h1>
+    <h2>Somos tu aliado en transporte y turismo</h2>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/index.html">Inicio</a></li>
+      <li><a href="/nuestraempresa.html">Nuestra Empresa</a></li>
+      <li><a href="/transporteespecial.html">Transporte Especial</a></li>
+      <li><a href="/turismo.html">Turismo</a></li>
+      <li><a href="/traslados.html">Traslados</a></li>
+      <li><a href="/contacto" class="current">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- FORMULARIO DE CONTACTO - INICIO -->
+  <section class="contenido">
+    <h2>Contáctanos</h2>
+    <form id="contactForm" method="POST" action="http://localhost:5000/guardar_contacto">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="numero">Número:</label>
+      <input type="tel" id="numero" name="numero" required pattern="[0-9+ ]+">
+
+      <label for="ciudad">Ciudad:</label>
+      <input type="text" id="ciudad" name="ciudad" required>
+
+      <label for="servicio">Servicio:</label>
+      <select id="servicio" name="servicio" required>
+        <option value="">Seleccione un servicio</option>
+        <option value="Transporte Especial">Transporte Especial</option>
+        <option value="Turismo">Turismo</option>
+        <option value="Traslados">Traslados</option>
+        <option value="Otro">Otro</option>
+      </select>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <div id="mensaje-exito" style="display:none;"></div>
+  </section>
+  <!-- FORMULARIO DE CONTACTO - FIN -->
+
+  <footer>
+    <p>&copy; 2025 A&G TOURS. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Agrega esto antes de </body> -->
+  <script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data
+    })
+    .then(response => response.text())
+    .then(msg => {
+      const mensaje = document.getElementById('mensaje-exito');
+      mensaje.textContent = msg;
+      mensaje.style.display = 'block';
+      mensaje.style.background = 'linear-gradient(90deg,#4e54c8,#8f94fb)';
+      mensaje.style.color = '#fff';
+      mensaje.style.padding = '12px';
+      mensaje.style.borderRadius = '8px';
+      mensaje.style.marginTop = '18px';
+      mensaje.style.boxShadow = '0 2px 8px rgba(78,84,200,0.08)';
+      setTimeout(() => { mensaje.style.display = 'none'; }, 3500);
+      form.reset();
+    })
+    .catch(() => {
+      alert('Hubo un error al enviar el formulario.');
+    });
+  });
+  </script>
+</body>
+</html>
