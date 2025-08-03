@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   const carrusel = document.querySelector('.carrusel');
   const imagenes = carrusel.querySelectorAll('img');
+  const btnIzq = carrusel.querySelector('.carrusel-flecha.izq');
+  const btnDer = carrusel.querySelector('.carrusel-flecha.der');
   let actual = 0;
+  let intervalo;
 
   function mostrarImagen(index) {
     imagenes.forEach((img, i) => {
@@ -14,7 +17,26 @@ document.addEventListener('DOMContentLoaded', function () {
     mostrarImagen(actual);
   }
 
+  function anteriorImagen() {
+    actual = (actual - 1 + imagenes.length) % imagenes.length;
+    mostrarImagen(actual);
+  }
+
   // Inicializa el carrusel
   mostrarImagen(actual);
-  setInterval(siguienteImagen, 3000); // Cambia cada 3 segundos
+  intervalo = setInterval(siguienteImagen, 3000);
+
+  btnDer.addEventListener('click', () => {
+    siguienteImagen();
+    reiniciarIntervalo();
+  });
+  btnIzq.addEventListener('click', () => {
+    anteriorImagen();
+    reiniciarIntervalo();
+  });
+
+  function reiniciarIntervalo() {
+    clearInterval(intervalo);
+    intervalo = setInterval(siguienteImagen, 3000);
+  }
 });
