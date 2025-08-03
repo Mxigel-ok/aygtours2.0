@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function mostrarImagen(index) {
     imagenes.forEach((img, i) => {
-      img.style.display = i === index ? 'block' : 'none';
+      img.classList.toggle('active', i === index);
     });
   }
 
