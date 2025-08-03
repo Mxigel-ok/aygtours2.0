@@ -71,11 +71,9 @@ body {
 }
 
 .carrusel img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   opacity: 0;
   transition: opacity 0.7s ease-in-out;
   z-index: 0;
@@ -120,13 +118,51 @@ body {
 
 
 @media (max-width: 900px) {
-  .bienvenida-section {
+  .bienvenida-section,
+  .empresa-section {
     flex-direction: column;
-    text-align: center;
+    gap: 20px;
+    padding: 20px 5px;
+    align-items: center;
   }
-
-  .bienvenida-texto, .bienvenida-carrusel {
+  .bienvenida-texto, .empresa-texto, .empresa-video, .carrusel {
     max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .carrusel {
+    height: 220px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.3em;
+  }
+  header h2 {
+    font-size: 1em;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  nav ul li {
+    margin: 8px 0;
+  }
+  .bienvenida-section,
+  .empresa-section {
+    padding: 10px 2px;
+  }
+  .carrusel {
+    height: 140px;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .contenido form {
+    padding: 18px 6px;
+    max-width: 98vw;
   }
 }
 
