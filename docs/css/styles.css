@@ -466,6 +466,8 @@ nav ul li a.current {
     overflow: hidden;
   }
 }
+@media (max-width: 900px) {
+}
 @keyframes slideIn {
   from { transform: translateX(-100%);}
   to { transform: translateX(0);}
