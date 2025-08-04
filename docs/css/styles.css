@@ -123,27 +123,28 @@ body {
   .bienvenida-section,
   .empresa-section {
     flex-direction: column;
-    gap: 20px;
-    padding: 20px 5px;
+    gap: 18px;
+    padding: 18px 4vw;
     align-items: center;
   }
   .bienvenida-texto, .empresa-texto, .empresa-video, .carrusel {
-    max-width: 100%;
+    max-width: 100vw;
     min-width: 0;
     width: 100%;
+    box-sizing: border-box;
   }
   .carrusel {
     height: 220px;
-    max-width: 100%;
+    max-width: 100vw;
   }
 }
 
 @media (max-width: 600px) {
   header h1 {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
   header h2 {
-    font-size: 1em;
+    font-size: 0.95em;
   }
   nav ul {
     flex-direction: column;
@@ -155,16 +156,41 @@ body {
   }
   .bienvenida-section,
   .empresa-section {
-    padding: 10px 2px;
+    padding: 8px 1vw;
+  }
+  .bienvenida-texto h2 {
+    font-size: 1.3em;
+    padding-inline: 0;
+  }
+  .bienvenida-texto p {
+    font-size: 1em;
   }
   .carrusel {
     height: 140px;
     min-width: 0;
     max-width: 100vw;
   }
+  .carrusel img {
+    border-radius: 8px;
+  }
   .contenido form {
-    padding: 18px 6px;
+    padding: 12px 2vw;
     max-width: 98vw;
+  }
+  .empresa-texto h2 {
+    font-size: 1.2em;
+    padding-inline: 0;
+  }
+  .empresa-texto p {
+    font-size: 1em;
+  }
+}
+
+/* Carrusel flechas más pequeñas en móvil */
+@media (max-width: 600px) {
+  .carrusel-flecha {
+    font-size: 1.3em;
+    padding: 0 7px;
   }
 }
 
