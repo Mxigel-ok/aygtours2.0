@@ -231,7 +231,7 @@ footer {
 
 
 header {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255, 0.459);
   padding: 20px;
   text-align: center;
 }
@@ -252,14 +252,14 @@ header h1 {
 }
 
 header h1 a {
-  color: white;
+  color: rgb(0, 80, 17);
   text-decoration: none;
 }
 
 header h2 {
   margin: 5px 0 0;
   font-weight: normal;
-  color: #81d742;
+  color: #000000;
 }
 
 nav ul {
