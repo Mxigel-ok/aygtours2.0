@@ -235,6 +235,16 @@ header {
   padding: 20px;
   text-align: center;
 }
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.logo {
+  height: 80px; /* ajusta según necesites */
+}
 
 header h1 {
   margin: 0;
