@@ -84,7 +84,7 @@ body {
 .carrusel img.active {
   opacity: 1;
   z-index: 1;
-  display: none;
+  display: block;
 }
 
 /* INICIO / BIENVENIDA */
