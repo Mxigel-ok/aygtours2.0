@@ -144,16 +144,18 @@ body {
     padding: 18px 4vw;
     align-items: center;
   }
-  .bienvenida-texto, .empresa-texto, .empresa-video, .carrusel {
+  .bienvenida-texto, .empresa-texto, .empresa-video, .carrusel, .empresa-video iframe {
     max-width: 100vw;
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
+    right: 160px;
   }
   .carrusel {
     height: 220px;
     max-width: 100vw;
   }
+
 }
 
 @media (max-width: 600px) {
@@ -200,6 +202,9 @@ body {
   }
   .empresa-texto p {
     font-size: 1em;
+  }
+    .empresa-video iframe {
+    right: 115px;
   }
 }
 
