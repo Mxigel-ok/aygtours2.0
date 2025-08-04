@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   background: url('https://aygtours.com/wp-content/uploads/2022/09/BUSES-FONDO-CLARO.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
@@ -9,15 +9,12 @@ body {
 
 /* NUESTRA EMPRESA / ESTILOS  */
 .empresa-section {
-    display: flex;
-    gap: 40px;
-    padding: 20px;
-    justify-content: space-between;
-    align-items: self-start;
-    flex-wrap: wrap;
-      padding: 60px 20px;
+  padding: 60px 5vw;
+  gap: 40px;
+  flex-wrap: wrap;
   background: rgba(0, 0, 0, 0.5);
-  text-align: center;
+  justify-content: center;
+  align-items: flex-start;
     
 }
 
@@ -25,17 +22,27 @@ body {
   flex: 1;
   min-width: 300px;
   color: #ffffff;
+    padding: 20px 5vw;
+  box-sizing: border-box;
 }
 
 .empresa-texto h2 {
     color: #65b904;
-    margin-bottom: 20px;
-    font-size: 50px;
-    padding-inline: 65px;
+    font-size: 54px;
+      font-size: 2.5em;
+  margin-bottom: 16px;
+  padding: 0; /* quitar padding-inline */
+  text-align: center;
+
 }
 
 .empresa-texto p {
-    font-size: 20px;
+  font-size: 1.4em;
+  line-height: 1.6;
+  margin: 0 auto 20px;
+  text-align: justify;
+  max-width: 800px;
+  padding: 0 10px;
 }
 .empresa-carrusel {
   flex: 1;
@@ -43,18 +50,20 @@ body {
 }
 
 .empresa-video{
-  flex: 100px ;
+  flex: 1;
+  min-width: 300px;
   position: relative;
-  padding-bottom: 50%;
-  height: 100px;
+  padding-bottom: 56.25%; /* relación 16:9 */
+  height: 0;
+  margin-top: 20px;
 }
 
 .empresa-video iframe {
   position: absolute;
-  top: 30px;
-  left: 0;
-  width: 90%;
-  height: 50%;
+  top: 0;
+  left: 160px;
+  width: 80%;
+  height: 80%;
   border: none;
 }
 
@@ -101,15 +110,23 @@ body {
 }
 
 .bienvenida-texto {
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
+  
+  box-sizing: border-box;
+  font-size: 20px 5w;
+  line-height: 1.6;
+  margin: 0 auto 20px;
+  text-align: justify;
+  max-width: 800px;
+  padding: 0 10px;
 }
 
 .bienvenida-texto h2 {
   font-size: 2.5em;
   color: #81d742;
-  margin-bottom: 15px;
+    font-size: 2.5em;
+  margin-bottom: 16px;
+  padding: 0; /* quitar padding-inline */
+  text-align: center;
 }
 
 .bienvenida-texto p {
@@ -288,22 +305,30 @@ nav ul li a.current {
 
 .contenido,
 .slider {
-  padding: 60px 20px;
   background: rgba(0, 0, 0, 0.5);
   text-align: center;
+    padding: 20px 5vw;
+  box-sizing: border-box;
 }
 
 .contenido h2,
 .slider h2 {
   color: #81d742;
-  margin-bottom: 20px;
+    font-size: 2.5em;
+  margin-bottom: 16px;
+  padding: 0; /* quitar padding-inline */
+  text-align: center;
 }
 
 .contenido p,
 .slider p {
-  font-size: 1.1em;
-  max-width: 700px;
-  margin: auto;
+
+    font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0 auto 20px;
+  text-align: justify;
+  max-width: 800px;
+  padding: 0 10px;
 }
 
 .slider img {
