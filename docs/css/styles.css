@@ -510,7 +510,6 @@ nav ul li a.current {
 .carrusel-flecha:hover { background: rgba(0, 80, 17, 0.548); }
 
 .contacto-profesional {
-  background: url('https://aygtours.com/wp-content/uploads/2022/09/BUSES-FONDO-CLARO.jpg') no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
   padding: 0;
