@@ -54,7 +54,7 @@
         <div class="info-item">
           <div>
             <strong>Ubicación</strong>
-            <p>Barranquilla: Calle 94 No 51B-43 oficina 401 Buró 51 </p>
+            <p>Barranquilla: Calle 94 No 51B - 43 oficina 401 Buró 51 </p>
             <p>Bogotá: Calle 68a No 68F - 24 </p>
           </div>
         </div>
@@ -62,44 +62,19 @@
     </div>
     
     <div class="formulario-container">
-      <form id="contactForm" method="POST" action="http://localhost:5000/guardar_contacto">
-        <div class="campo-grupo">
-          <label for="nombre">Nombre *</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-        </div>
+      <div class="contacto-whatsapp">
+        <h2>¡Hablemos directamente!</h2>
+        <p>Estamos listos para atenderte y resolver todas tus dudas sobre nuestros servicios de transporte y turismo.</p>
         
-        <div class="campos-linea">
-          <div class="campo-grupo">
-            <label for="numero">Teléfono *</label>
-            <input type="tel" id="numero" name="numero" placeholder="+57 300 123 4567" required>
-          </div>
-          
-          <div class="campo-grupo">
-            <label for="ciudad">Ciudad *</label>
-            <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad" required>
-          </div>
-        </div>
+        <a href="https://w.app/b6ouv9" target="_blank" class="boton-whatsapp">
+           HABLA CON NOSOTROS
+        </a>
         
-        <div class="campo-grupo">
-          <label for="servicio">Servicio de interés *</label>
-          <select id="servicio" name="servicio" required>
-            <option value="">Selecciona un servicio</option>
-            <option value="Transporte Especial">Transporte Especial</option>
-            <option value="Turismo">Turismo</option>
-            <option value="Traslados">Traslados</option>
-            <option value="Otro">Otro servicio</option>
-          </select>
+        <div class="info-whatsapp">
+          <p><strong>Respuesta inmediata</strong></p>
+          <p>Te atendemos las 24 horas</p>
         </div>
-        
-        <div class="campo-grupo">
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu proyecto o necesidad..." rows="4"></textarea>
-        </div>
-        
-        <button type="submit" class="boton-enviar">
-          ENVIAR MENSAJE →
-        </button>
-      </form>
+      </div>
     </div>
   </div>
 </section>
@@ -108,35 +83,7 @@
     <p>&copy; 2025 A&G TOURS. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
 
-    fetch(form.action, {
-      method: 'POST',
-      body: data
-    })
-    .then(response => response.text())
-    .then(msg => {
-      const mensaje = document.getElementById('mensaje-exito');
-      mensaje.textContent = msg;
-      mensaje.style.display = 'block';
-      mensaje.style.background = 'linear-gradient(90deg,#4e54c8,#8f94fb)';
-      mensaje.style.color = '#fff';
-      mensaje.style.padding = '12px';
-      mensaje.style.borderRadius = '8px';
-      mensaje.style.marginTop = '18px';
-      mensaje.style.boxShadow = '0 2px 8px rgba(78,84,200,0.08)';
-      setTimeout(() => { mensaje.style.display = 'none'; }, 3500);
-      form.reset();
-    })
-    .catch(() => {
-      alert('Hubo un error al enviar el formulario.');
-    });
-  });
-  </script>
   <script src="js/menu.js"></script>
 
 </body>

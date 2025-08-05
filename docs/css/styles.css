@@ -601,6 +601,61 @@ nav ul li a.current {
   justify-content: center;
 }
 
+.contacto-whatsapp {
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contacto-whatsapp h2 {
+  color: rgb(0, 80, 17);
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.contacto-whatsapp p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.boton-whatsapp {
+  display: inline-block;
+  background: rgb(0, 80, 17);
+  color: white;
+  text-decoration: none;
+  padding: 20px 40px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 80, 17, 0.3);
+}
+
+.boton-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 80, 17, 0.4);
+  background: rgb(1, 58, 13);
+}
+
+.info-whatsapp {
+  margin-top: 20px;
+}
+
+.info-whatsapp p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #888;
+}
+
+.info-whatsapp strong {
+  color: rgb(0, 80, 17);
+}
+
 .formulario-container form {
   width: 100%;
   max-width: 500px;
@@ -671,6 +726,28 @@ nav ul li a.current {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content li a {
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #666;
+}
+
+/* Mostrar el menú al pasar el mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 @media (max-width: 968px) {
   .contacto-container {
     grid-template-columns: 1fr;
@@ -683,5 +760,14 @@ nav ul li a.current {
   
   .campos-linea {
     grid-template-columns: 1fr;
+  }
+
+  .contacto-whatsapp h2 {
+    font-size: 1.8rem;
+  }
+
+  .boton-whatsapp {
+    padding: 18px 30px;
+    font-size: 1.1rem;
   }
 }
