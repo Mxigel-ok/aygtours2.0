@@ -12,7 +12,7 @@ body {
   padding: 60px 5vw;
   gap: 40px;
   flex-wrap: wrap;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 80, 17, 0.548);
   justify-content: center;
   align-items: flex-start;
     
@@ -27,7 +27,7 @@ body {
 }
 
 .empresa-texto h2 {
-    color: #65b904;
+  color: rgb(1, 44, 10);
     font-size: 54px;
       font-size: 2.5em;
   margin-bottom: 16px;
@@ -101,12 +101,13 @@ body {
 .bienvenida-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 50px;
   padding: 40px;
   background: rgba(0, 80, 17, 0.548);
   color: #fff;
   justify-content: center;
   align-items: center;
+  min-height: 65vh;
 }
 
 .bienvenida-texto {
@@ -309,7 +310,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.current {
-  color: #81d742;
+  color: rgb(4, 124, 30);
 }
 
 .contenido,
@@ -419,19 +420,19 @@ nav ul li a.current {
 
 /* --- MENÚ HAMBURGUESA RESPONSIVE --- */
 .menu-toggle {
-  display: none;
-  position: absolute;
-  top: 22px;
-  right: 24px;
-  background: #222;
-  color: #81d742;
-  border: none;
-  font-size: 2.2em;
-  z-index: 1001;
-  border-radius: 8px;
-  padding: 2px 14px 2px 10px;
-  cursor: pointer;
-  transition: background 0.2s;
+    display: none;
+    position: absolute;
+    top: 9px;
+    right: 369px;
+    background: rgba(0, 80, 17, 0.548);
+    color: #f7fff1;
+    border: none;
+    font-size: 2.2em;
+    z-index: 1001;
+    border-radius: 8px;
+    padding: 4px 12px 2px 10px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 .menu-toggle:active,
 .menu-toggle:focus {
