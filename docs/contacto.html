@@ -11,7 +11,7 @@
     <header>
       <img src="img/logo2.png" alt="Logo A&G Tours" class="logo" />
 
-      <h1><a href="#">A&G TOURS</a></h1>
+      <h1><a href="index.html">A&G TOURS</a></h1>
       <h2>Somos tu aliado en transporte y turismo</h2>
     </header>
 
@@ -26,38 +26,88 @@
     </ul>
   </nav>
 
-  <!-- FORMULARIO DE CONTACTO - INICIO -->
-  <section class="contenido">
-    <h2>Contáctanos</h2>
-    <form id="contactForm" method="POST" action="http://localhost:5000/guardar_contacto">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
-
-      <label for="numero">Número:</label>
-      <input type="tel" id="numero" name="numero" required pattern="[0-9+ ]+">
-
-      <label for="ciudad">Ciudad:</label>
-      <input type="text" id="ciudad" name="ciudad" required>
-
-      <label for="servicio">Servicio:</label>
-      <select id="servicio" name="servicio" required>
-        <option value="Transporte Especial">Transporte Especial</option>
-        <option value="Turismo">Turismo</option>
-        <option value="Traslados">Traslados</option>
-        <option value="Otro">Otro</option>
-      </select>
-
-      <button type="submit">Enviar</button>
-    </form>
-    <div id="mensaje-exito" style="display:none;"></div>
-  </section>
-  <!-- FORMULARIO DE CONTACTO - FIN -->
+<section class="contacto-profesional">
+  <div class="contacto-container">
+    <div class="contacto-info">
+      <h1>A&G TOURS</h1>
+      <p class="subtitulo">Tu aliado en transporte y turismo</p>
+      
+      <div class="mensaje-principal">
+        <h2>¡Estamos listos para atenderte!</h2>
+        <p>Contáctanos y descubre nuestros servicios de transporte especializado.</p>
+      </div>
+      
+      <div class="info-contacto">
+        <div class="info-item">
+          <div>
+            <strong>Teléfono</strong>
+            <p>+57 300 123 4567</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div>
+            <strong>Correo</strong>
+            <p>info@agtours.com</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <div>
+            <strong>Ubicación</strong>
+            <p>Barranquilla, Colombia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="formulario-container">
+      <form id="contactForm" method="POST" action="http://localhost:5000/guardar_contacto">
+        <div class="campo-grupo">
+          <label for="nombre">Nombre *</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+        </div>
+        
+        <div class="campos-linea">
+          <div class="campo-grupo">
+            <label for="numero">Teléfono *</label>
+            <input type="tel" id="numero" name="numero" placeholder="+57 300 123 4567" required>
+          </div>
+          
+          <div class="campo-grupo">
+            <label for="ciudad">Ciudad *</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad" required>
+          </div>
+        </div>
+        
+        <div class="campo-grupo">
+          <label for="servicio">Servicio de interés *</label>
+          <select id="servicio" name="servicio" required>
+            <option value="">Selecciona un servicio</option>
+            <option value="Transporte Especial">Transporte Especial</option>
+            <option value="Turismo">Turismo</option>
+            <option value="Traslados">Traslados</option>
+            <option value="Otro">Otro servicio</option>
+          </select>
+        </div>
+        
+        <div class="campo-grupo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu proyecto o necesidad..." rows="4"></textarea>
+        </div>
+        
+        <button type="submit" class="boton-enviar">
+          ENVIAR MENSAJE →
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
 
   <footer>
     <p>&copy; 2025 A&G TOURS. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Agrega esto antes de </body> -->
   <script>
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
