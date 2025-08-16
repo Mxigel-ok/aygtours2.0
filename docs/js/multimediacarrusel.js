@@ -8,5 +8,5 @@ document.querySelectorAll('.carousel').forEach(carousel => {
             imgs[index].classList.remove('active');
             index = (index + 1) % imgs.length;
             imgs[index].classList.add('active');
-        }, 3000); // Cambia cada 3 segundos
+        }, 3000); 
     });

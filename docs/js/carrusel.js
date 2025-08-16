@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
     mostrarImagen(actual);
   }
 
-  // Inicializa el carrusel
   mostrarImagen(actual);
   intervalo = setInterval(siguienteImagen, 3000);
 
