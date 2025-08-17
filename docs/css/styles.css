@@ -55,23 +55,6 @@ body {
   padding: 0 10px;
 }
 
-.empresa-video {
-  flex: 1;
-  min-width: 300px;
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  margin-top: 20px;
-}
-
-.empresa-video iframe {
-  position: absolute;
-  top: 0;
-  left: 160px;
-  width: 80%;
-  height: 80%;
-  border: none;
-}
 
 .carrusel {
   width: 1200px;
@@ -147,19 +130,13 @@ body {
     align-items: center;
   }
   .bienvenida-texto,
-  .empresa-texto,
-  .empresa-video,
-  .empresa-video iframe {
+  .empresa-texto {
     max-width: 100vw;
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
   }
-  .empresa-video iframe {
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+
   .carrusel {
     height: 220px;
     max-width: 100vw;
@@ -203,9 +180,7 @@ body {
   .empresa-texto p {
     font-size: 1em;
   }
-  .empresa-video iframe {
-    right: 115px;
-  }
+
 }
 
 @media (max-width: 600px) {
@@ -805,4 +780,91 @@ nav ul li a.current {
   .formulario-container {
     padding: 30px 20px;
   }
+}
+
+
+.vehiculos-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: rgba(0, 80, 17, 0.548);
+}
+
+.vehiculos-section h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.vehiculo-carrusel {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  background: #000;
+}
+
+.vehiculo-carrusel .slide {
+  display: none;
+  position: relative;
+}
+
+.vehiculo-carrusel .slide.active {
+  display: block;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.vehiculo-carrusel img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.descripcion {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: #fff;
+  text-align: left;
+}
+
+.descripcion h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0.25px rgb(1, 58, 13); /* grosor y color del borde */
+
+}
+
+.descripcion p {
+  font-size: 1.1rem;
+}
+
+.indicadores {
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 9px;
+}
+
+.indicadores span {
+  width: 12px;
+  height: 12px;
+  background: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicadores span.active {
+  background: rgb(1, 58, 13);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(1.05);}
+  to { opacity: 1; transform: scale(1);}
 }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A&G TOURS | Vehículos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <img src="img/logo2.png" alt="Logo A&G Tours" class="logo" />
+      <h1><a href="index.html">A&G TOURS</a></h1>
+      <h2>Confort y seguridad en cada viaje</h2>
+    </header>
+
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nuestraempresa.html">Nuestra Empresa</a></li>
+        <li><a href="multimedia.html">Servicios</a></li>
+        <li><a href="vehiculos.html" class="current">Vehículos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <main class="vehiculos-section">
+      <h2>Nuestros Vehículos</h2>
+
+      <div class="vehiculo-carrusel">
+        <div class="slide active">
+          <img src="img/vehiculos/img/vehiculo1.jpg" alt="Bus de turismo" />
+          <div class="descripcion">
+            <h3>Van Ejecutiva</h3>
+            <p>
+              Perfecta para grupos pequeños o traslados ejecutivos. Espaciosa,
+              cómoda y moderna. Capacidad de hasta 19 pasajeros con aire acondicionado.
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="img/vehiculos/img/vehiculo2.jpg" alt="Bus de turismo" />
+          <div class="descripcion">
+            <h3>Carro Sedán</h3>
+            <p>
+              Ideal para traslados urbanos y viajes cortos. Capacidad de hasta 4 pasajeros,
+              aire acondicionado y baúl para 2–3 maletas.
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="img/vehiculos/img/vehiculo3.jpg" alt="Microbús" />
+          <div class="descripcion">
+            <h3>Bus de Turismo</h3>
+            <p>
+              Ideal para viajes largos en grupo. Capacidad de hasta 40 pasajeros
+              con aire acondicionado y asientos reclinables.
+            </p>
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="img/vehiculos/img/vehiculo4.jpg" alt="Carro sedán" />
+          <div class="descripcion">
+            <h3>Microbús</h3>
+            <p>
+              Opción práctica y versátil para recorridos cortos. Capacidad de hasta 23 pasajeros.
+            </p>
+          </div>
+        </div>
+
+        <!-- Botones flechas -->
+        <button class="carrusel-flecha izq">&#10094;</button>
+        <button class="carrusel-flecha der">&#10095;</button>
+
+        <!-- Indicadores -->
+        <div class="indicadores"></div>
+      </div>
+    </main>
+
+    <script src="js/menu.js"></script>
+    <script src="js/vehiculos.js"></script>
+  </body>
+</html>
