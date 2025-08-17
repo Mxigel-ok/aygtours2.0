@@ -770,3 +770,40 @@ nav ul li a.current {
   font-size: 1.05em; /* más pequeño */
   line-height: 1.5;
 }
+
+.icono {
+  font-size: 1.5rem;
+  color: #81d742;
+}
+
+.contacto-info, .formulario-container {
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .contacto-info h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .mensaje-principal h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .info-contacto {
+    gap: 15px;
+  }
+  .formulario-container {
+    padding: 30px 20px;
+  }
+}
