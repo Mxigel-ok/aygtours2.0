@@ -40,8 +40,7 @@ body {
 
 .empresa-texto h2 {
   color: rgb(1, 58, 13);
-  font-size: 54px;
-  font-size: 2.5em;
+  font-size: 2.6em;
   margin-bottom: 16px;
   padding: 0;
   text-align: center;
@@ -198,7 +197,7 @@ body {
   }
 
   .empresa-texto h2 {
-    font-size: 1.2em;
+    font-size: 2.6em;
     padding-inline: 0;
   }
   .empresa-texto p {
