@@ -868,3 +868,97 @@ nav ul li a.current {
   from { opacity: 0; transform: scale(1.05);}
   to { opacity: 1; transform: scale(1);}
 }
+
+/* Estilos para las páginas por departamento */
+.departamento-page {
+  padding: 40px 20px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.departamento-intro {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 50px;
+  text-align: justify;
+}
+
+.departamento-intro h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #045224, #12990d);
+}
+
+.departamento-intro p {
+  text-align: justify;
+  line-height: 1.6;
+  color: #000;
+}
+
+.departamento-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.texto-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: justify;
+}
+
+.texto-col h3 {
+  font-size: 1.6rem;
+  color: rgb(1, 58, 13);
+}
+
+.texto-col p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.col-img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .departamento-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Call To Action centrado */
+.cta {
+  text-align: center;
+  margin: 60px auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #00c853, #009624);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 20px 50px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+  max-width: 90%;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #00e676, #00c853);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
