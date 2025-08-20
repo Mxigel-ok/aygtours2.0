@@ -980,7 +980,7 @@ nav ul li a.current {
 }
 
 .titulo-header h2 {
-  margin: 3px 0 0;
+  margin: 0px -4px 0;
   font-weight: normal;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #333;
