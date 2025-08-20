@@ -283,7 +283,7 @@ nav ul li a.current {
   top: 10px;
   right: 10px;
   z-index: 1002;
-  background:rgb(0, 80, 17);
+  background:rgba(0, 80, 17, 0.356);
   color: rgb(255, 255, 255);
   border: none;
   font-size: 2.2em;
