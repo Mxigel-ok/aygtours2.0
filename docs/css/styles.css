@@ -283,8 +283,8 @@ nav ul li a.current {
   top: 10px;
   right: 10px;
   z-index: 1002;
-  background: rgba(35, 95, 0, 0.658);
-  color: #81d742;
+  background:rgb(0, 80, 17);
+  color: rgb(255, 255, 255);
   border: none;
   font-size: 2.2em;
   z-index: 1001;
@@ -295,7 +295,7 @@ nav ul li a.current {
 }
 .menu-toggle:active,
 .menu-toggle:focus {
-  background: rgba(35, 95, 0, 0.658);
+  background: rgb(0, 80, 17);
 }
 @media (max-width: 768px) {
   .contenedor {
@@ -316,36 +316,42 @@ nav ul li a.current {
     position: fixed;
     top: 0;
     left: 0;
-    width: 80vw;
-    max-width: 320px;
-    height: 100vh;
+    width: 100vw;   
+    height: auto;    
+    max-height: 0;   
+    overflow: hidden;
     padding-top: 70px;
     z-index: 1000;
-    box-shadow: 2px 0 16px #0008;
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
-    border-left: 3px solid rgba(0, 80, 17, 0.95);
+    box-shadow: 0 4px 16px #0008;
+    border-bottom: 3px solid rgba(0, 80, 17, 0.95);
+    border-radius: 0 0 16px 16px;
+    transition: max-height 0.3s ease-out;
   }
+
   nav ul.show {
     display: flex;
-    animation: slideIn 0.25s;
+    max-height: 100vh; 
+    animation: slideDown 0.3s ease-out;
   }
+
   .menu-toggle {
     display: block;
   }
+
   body.menu-open {
     overflow: hidden;
   }
 }
 
-@keyframes slideIn {
+@keyframes slideDown {
   from {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
+
 
 .carrusel-flecha {
   position: absolute;
@@ -962,3 +968,43 @@ nav ul li a.current {
 }
 
 
+.titulo-header {
+  display: flex;
+  flex-direction: column; 
+  line-height: 1.2;
+}
+
+.titulo-header h1 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.titulo-header h2 {
+  margin: 3px 0 0;
+  font-weight: normal;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #333;
+}
+
+/* Teléfonos */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;     
+    justify-content: flex-start;
+    text-align: left;
+    gap: 8px;
+  }
+
+  .logo {
+    max-width: 70px;          
+    height: auto;
+  }
+
+  .titulo-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .titulo-header h2 {
+    font-size: 0.9rem;
+  }
+}
