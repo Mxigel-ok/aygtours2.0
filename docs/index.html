@@ -10,10 +10,10 @@
   <body>
     <header>
       <img src="img/logo2.png" alt="Logo A&G Tours" class="logo" />
-  <div class="titulo-header">
-    <h1><a href="index.html">A&G TOURS</a></h1>
-    <h2>Somos tu aliado en transporte y turismo</h2>
-  </div>
+      <div class="titulo-header">
+        <h1><a href="index.html">A&G TOURS</a></h1>
+        <h2>Somos tu aliado en transporte y turismo</h2>
+      </div>
     </header>
 
     <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
@@ -21,7 +21,7 @@
       <ul>
         <li><a href="index.html" class="current">Inicio</a></li>
         <li><a href="nuestraempresa.html">Nuestra Empresa</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="turismo.html">Turismo</a></li>
         <li><a href="vehiculos.html">Vehículos</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
@@ -32,7 +32,7 @@
         <h2>¡Bienvenido a A&G TOURS!</h2>
         <p>
           Somos tu aliado confiable en transporte y turismo en Colombia.
-          Ofrecemos servicios de transporte especial, traslados ejecutivos,
+          Ofrecemos turismo de transporte especial, traslados ejecutivos,
           recorridos turísticos y soluciones personalizadas para empresas
           viajeros.
         </p>
@@ -46,11 +46,69 @@
       <div>
         <div class="carrusel">
           <img src="img/logo.png" class="active" />
-
         </div>
+        <br />
+        <br />
+      </div>
+    </section>
+    <section class="carruselsl">
+      <div class="slide active">
+        <picture>
+          <source srcset="img/NuestrosvehiculosT.png" media="(max-width: 768px)" />
+          <img src="img/Nuestrosvehiculos.png" alt="Usuarios de la salud" />
+        </picture>
+      </div>
+      <!-- <div class="slide">
+        <img src="img/Nuestros vehículos.png" alt="Transporte empresarial" />
+      </div>
+      <div class="slide">
+        <img src="img/Transporte confiable (3).png" alt="Turismo" />
+      </div> -->
+
+      <!-- Botones -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+    </section>
+
+    <section class="turismo">
+      <h2>SOLUCIONES DE TRANSPORTE ESPECIAL</h2>
+      <div class="turismo-grid">
+        <div class="servicio-card">
+          <img src="img/vehiculos/img/vehiculo1.jpg" alt="Empresarial" />
+          <h3>Empresarial</h3>
+        </div>
+        <div class="servicio-card">
+          <img src="img/vehiculos/img/vehiculo2.jpg" alt="Escolar" />
+          <h3>Escolar</h3>
+        </div>
+        <div class="servicio-card">
+          <img src="img/vehiculos/img/vehiculo3.jpg" alt="Transporte VIP" />
+          <h3>Transporte VIP</h3>
+        </div>
+        <a href="turismo.html" class="servicio-card">
+          <img src="img/vehiculos/img/vehiculo4.jpg" alt="Turismo" />
+          <h3>Turismo</h3>
+        </a>
+                <div class="servicio-card">
+          <img src="img/vehiculos/img/vehiculo3.jpg" alt="Transporte VIP" />
+          <h3>Usuarios de la salud</h3>
+        </div>
+      </div>
+    </section>
+    <section class="turismo">
+      <h2>OPERACION NACIONAL</h2>
+      <div class="texto-col">
+        <p class="texto-col">
+          Estamos en las principales capitales de Colombia y en ciudades
+          intermedias para prestar el servicio de transporte especial de
+          pasajeros en vehículos confortables. Solicita tus servicios de
+          transporte, logística y turismo desde cualquier lugar a través de
+          nuestra página web. En A&G TOURS tenemos operación a nivel nacional.
+        </p>
       </div>
     </section>
 
     <script src="js/menu.js"></script>
+    <script src="js/carruselsl.js"></script>
   </body>
 </html>

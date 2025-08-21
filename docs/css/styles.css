@@ -578,12 +578,12 @@ nav ul li a.current {
   }
 }
 
-.servicios-section {
+.turismo-section {
   text-align: center;
   padding: 40px 20px;
 }
 
-.servicios-section h2 {
+.turismo-section h2 {
   font-size: 2rem;
   margin-bottom: 30px;
   color: #222;
@@ -938,7 +938,7 @@ nav ul li a.current {
 .texto-col p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #222;
+  color: #000000;
 }
 
 .col-img {
@@ -1022,4 +1022,155 @@ nav ul li a.current {
   .titulo-header h2 {
     font-size: 0.9rem;
   }
+}
+/* Carrusel */
+.carruselsl {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carruselsl .slide {
+  display: none;
+  position: relative;
+}
+
+.carruselsl .slide.active {
+  display: block;
+}
+
+.carruselsl picture,
+.carruselsl img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Mantiene proporción sin deformar */
+}
+
+/* Texto encima de la imagen */
+.carruselsl .caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: #fff;
+  text-align: left;
+  background: rgba(0,0,0,0.4); /* fondo semitransparente para mejorar lectura */
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.carruselsl .caption h2 {
+  margin: 0 0 5px;
+  font-size: 1.8rem;
+}
+
+.carruselsl .caption p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Botones de navegación */
+.carruselsl .prev,
+.carruselsl .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+
+.carruselsl .prev:hover,
+.carruselsl .next:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.carruselsl .prev { left: 10px; }
+.carruselsl .next { right: 10px; }
+
+/* 📱 Ajustes para móviles */
+/* Carrusel en escritorio (pantallas grandes) */
+@media (min-width: 769px) {
+  .carruselsl {
+    height: 600px; /* ajusta a la altura de tus imágenes horizontales */
+  }
+
+  .carruselsl picture,
+  .carruselsl img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* recorta sin deformar */
+  }
+}
+
+/* Carrusel en móviles */
+@media (max-width: 768px) {
+  .carruselsl {
+    height: auto; /* deja que la imagen vertical crezca sola */
+  }
+
+  .carruselsl picture,
+  .carruselsl img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* mantiene toda la imagen visible */
+  }
+}
+
+
+
+
+
+/* turismo */
+.turismo {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f8f8f8;
+}
+
+.turismo h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.turismo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.servicio-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.servicio-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  
+}
+a.servicio-card {
+  text-decoration: none;
+  color: inherit;
+  display: block; 
+}
+
+.servicio-card h3 {
+  padding: 15px;
+  font-size: 1.2em;
+  color: #000;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
 }
