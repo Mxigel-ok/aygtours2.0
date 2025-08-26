@@ -2,7 +2,6 @@ let index = 0;
 let slides = document.querySelectorAll(".carruselsl .slide");
 let timer;
 
-// Mostrar una slide
 function showSlide(n) {
   slides.forEach(slide => slide.classList.remove("active"));
   
@@ -13,25 +12,22 @@ function showSlide(n) {
   slides[index].classList.add("active");
 }
 
-// Automático
 function autoSlide() {
   index++;
   showSlide(index);
-  timer = setTimeout(autoSlide, 4000); // cada 4s
+  timer = setTimeout(autoSlide, 6000); // cada 6s
 }
 
-// Botón anterior
 document.querySelector(".prev").addEventListener("click", () => {
-  clearTimeout(timer); // detener autoplay
+  clearTimeout(timer); 
   showSlide(index - 1);
-  timer = setTimeout(autoSlide, 4000); // reiniciar
+  timer = setTimeout(autoSlide, 6000);
 });
 
-// Botón siguiente
 document.querySelector(".next").addEventListener("click", () => {
   clearTimeout(timer);
   showSlide(index + 1);
-  timer = setTimeout(autoSlide, 4000);
+  timer = setTimeout(autoSlide, 6000);
 });
 
 // Iniciar
