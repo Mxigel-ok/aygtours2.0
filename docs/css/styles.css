@@ -268,7 +268,6 @@ header h1 a {
 nav ul {
   display: flex;
   list-style: none;
-  gap: 20px;
 }
 
 nav ul li {
@@ -278,7 +277,7 @@ nav ul li {
 nav ul li a {
   color: #5e5c5c;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -298,7 +297,6 @@ nav ul li a.current {
   }
   nav ul li a {
     color: white;
-    font-size: 22px;
   }
 }
 
@@ -345,7 +343,7 @@ nav ul li a.current {
     height: auto;
     max-height: 0;
     overflow: hidden;
-    padding-top: 70px;
+    padding-top: 24px;
     z-index: 1000;
     box-shadow: 0 4px 16px #0008;
     border-bottom: 3px solid rgba(0, 80, 17, 0.95);
