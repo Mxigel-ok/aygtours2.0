@@ -100,33 +100,28 @@ body::before {
 }
 
 .bienvenida-section {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* texto mitad - imagen mitad */
   gap: 40px;
-  padding: 40px;
+  padding: 60px 5vw;
   background: rgba(0, 80, 17, 0.548);
   color: #fff;
-  justify-content: center;
-  align-items: center;
-  min-height: 65vh;
+  align-items: center; /* centra vertical */
+  min-height: 70vh;
 }
 
 .bienvenida-texto {
-  box-sizing: border-box;
-  font-size: 20px 5w;
+  font-size: 1.1rem;
   line-height: 1.6;
-  margin: 0 auto 20px;
   text-align: justify;
-  max-width: 800px;
-  padding: 0 10px;
+  max-width: 700px;
+  margin: auto;
 }
 
 .bienvenida-texto h2 {
   font-size: 2.5em;
   color: rgb(1, 44, 10);
-  font-size: 2.5em;
   margin-bottom: 16px;
-  padding: 0;
   text-align: center;
 }
 
@@ -136,14 +131,32 @@ body::before {
   margin-bottom: 20px;
 }
 
+.bienvenida-section .carrusel {
+  width: 100%;
+  height: 100%;
+  max-width: none;  /* quita límite de 600px */
+  border-radius: 2; /* quita bordes redondeados */
+  margin: 0;        /* quita centrado */
+  box-shadow: none; /* quita sombra */
+}
+
+.bienvenida-section .carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* la imagen rellena */
+  display: block;
+  opacity: 1;
+}
+
 @media (max-width: 900px) {
-  .bienvenida-section,
+
   .empresa-section {
     flex-direction: column;
     gap: 18px;
     padding: 18px 4vw;
     align-items: center;
   }
+
   .bienvenida-texto,
   .empresa-texto {
     max-width: 100vw;
@@ -151,12 +164,18 @@ body::before {
     width: 100%;
     box-sizing: border-box;
   }
+  .bienvenida-section {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 4vw;
+  }
 
-  .carrusel {
-    height: 220px;
-    max-width: 100vw;
+  .bienvenida-section .carrusel {
+    height: 250px;
   }
 }
+
+
 
 @media (max-width: 600px) {
   header h1 {
@@ -412,6 +431,8 @@ nav ul li a.current {
   display: flex;
   flex-direction: column;
   justify-content: center;
+    text-align: center;   
+  align-items: center; 
 }
 
 .contacto-info h1 {
@@ -449,8 +470,10 @@ nav ul li a.current {
 
 .info-item {
   display: flex;
-  align-items: center;
-  gap: 15px;
+  flex-direction: column;   
+  align-items: center;     
+  text-align: center;     
+  gap: 10px;
 }
 
 .icono {
