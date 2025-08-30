@@ -132,7 +132,7 @@ body {
   width: 100%;
   height: 100%;
   max-width: none; /* quita límite de 600px */
-  border-radius: 2; /* quita bordes redondeados */
+  border-radius: 0; /* quita bordes redondeados */
   margin: 0; /* quita centrado */
   box-shadow: none; /* quita sombra */
 }
@@ -167,7 +167,9 @@ body {
   }
 
   .bienvenida-section .carrusel {
-    height: 250px;
+    height: 100%;
+    margin: auto;
+
   }
 }
 
