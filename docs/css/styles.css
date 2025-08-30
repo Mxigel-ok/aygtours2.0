@@ -1,56 +1,35 @@
-html {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: url("https://aygtours.com/wp-content/uploads/2022/09/BUSES-FONDO-CLARO.jpg")
-    no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-    background: url("https://aygtours.com/wp-content/uploads/2022/09/BUSES-FONDO-CLARO.jpg")
- no-repeat center center;
-  background-size: cover;
-  z-index: -1;
-}
-
-
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fdfdfd;
+  background: url("https://aygtours.com/wp-content/uploads/2022/09/BUSES-FONDO-CLARO.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
 .empresa-section {
-  padding: 60px 5vw;
-  gap: 40px;
-  flex-wrap: wrap;
-  background: rgba(0, 80, 17, 0.548);
-  justify-content: center;
-  align-items: flex-start;
+  padding: 30px 20px;
+  text-align: center;
 }
 
 .empresa-texto {
-  flex: 1;
-  min-width: 300px;
-  color: #ffffff;
-  padding: 20px 5vw;
-  box-sizing: border-box;
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #000000;
+}
+.empresa-section.compacta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
 }
 
 .empresa-texto h2 {
@@ -61,15 +40,33 @@ body::before {
   text-align: center;
 }
 
-.empresa-texto p {
-  font-size: 1.4em;
-  line-height: 1.6;
-  margin: 0 auto 20px;
-  text-align: justify;
-  max-width: 800px;
-  padding: 0 10px;
+.empresa-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.empresa-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.empresa-card h2 {
+  color: rgb(1, 58, 13);
+  margin-bottom: 15px;
+}
+
+.valores-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.valores-lista li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
 
 .carrusel {
   width: 100%;
@@ -128,15 +125,15 @@ body::before {
 .bienvenida-texto p {
   font-size: 1.2em;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .bienvenida-section .carrusel {
   width: 100%;
   height: 100%;
-  max-width: none;  /* quita límite de 600px */
+  max-width: none; /* quita límite de 600px */
   border-radius: 2; /* quita bordes redondeados */
-  margin: 0;        /* quita centrado */
+  margin: 0; /* quita centrado */
   box-shadow: none; /* quita sombra */
 }
 
@@ -149,7 +146,6 @@ body::before {
 }
 
 @media (max-width: 900px) {
-
   .empresa-section {
     flex-direction: column;
     gap: 18px;
@@ -174,8 +170,6 @@ body::before {
     height: 250px;
   }
 }
-
-
 
 @media (max-width: 600px) {
   header h1 {
@@ -214,7 +208,6 @@ body::before {
   .empresa-texto p {
     font-size: 1em;
   }
-
 }
 
 @media (max-width: 600px) {
@@ -246,6 +239,7 @@ footer {
 header {
   background-color: rgb(255, 255, 255);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 20px;
   padding: 15px;
@@ -277,21 +271,22 @@ header h2 {
 
 nav ul {
   display: flex;
-  justify-content: center;
-  background: rgba(20, 20, 20, 0.97);
-  padding: 10px 0;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.97);
+  padding: 1px 126px;
   list-style: none;
   margin: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 nav ul li a {
-  color: #fff;
+  color: #5e5c5c;
   text-decoration: none;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -307,7 +302,11 @@ nav ul li a.current {
   }
 
   nav ul li {
-    margin: 10px 0;
+    margin: 10px 10px;
+  }
+  nav ul li a {
+    color: white;
+    font-size: 22px;
   }
 }
 
@@ -317,7 +316,7 @@ nav ul li a.current {
   top: 10px;
   right: 10px;
   z-index: 1002;
-  background:rgba(0, 80, 17, 0.356);
+  background: rgba(0, 80, 17, 0.356);
   color: rgb(255, 255, 255);
   border: none;
   font-size: 2.2em;
@@ -350,9 +349,9 @@ nav ul li a.current {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;   
-    height: auto;    
-    max-height: 0;   
+    width: 100vw;
+    height: auto;
+    max-height: 0;
     overflow: hidden;
     padding-top: 70px;
     z-index: 1000;
@@ -364,8 +363,13 @@ nav ul li a.current {
 
   nav ul.show {
     display: flex;
-    max-height: 100vh; 
+    max-height: 100vh;
     animation: slideDown 0.3s ease-out;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+    align-content: center;
+    justify-content: space-between;
   }
 
   .menu-toggle {
@@ -385,7 +389,6 @@ nav ul li a.current {
     transform: translateY(0);
   }
 }
-
 
 .carrusel-flecha {
   position: absolute;
@@ -431,8 +434,8 @@ nav ul li a.current {
   display: flex;
   flex-direction: column;
   justify-content: center;
-    text-align: center;   
-  align-items: center; 
+  text-align: center;
+  align-items: center;
 }
 
 .contacto-info h1 {
@@ -470,9 +473,9 @@ nav ul li a.current {
 
 .info-item {
   display: flex;
-  flex-direction: column;   
-  align-items: center;     
-  text-align: center;     
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 10px;
 }
 
@@ -750,51 +753,13 @@ nav ul li a.current {
   background: #20b954;
 }
 
-.valores-lista {
-  font-size: 1.3em;
-  line-height: 1.8;
-  margin: 20px auto;
-  max-width: 600px;
-  padding-left: 20px;
-  list-style-type: disc;
-}
-
-.valores-lista li {
-  margin-bottom: 10px;
-}
-
-/* ESTILOS RAROS */
-/* Compactar misión, visión y valores */
-.empresa-section.compacta {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px; /* antes 30px */
-  padding: 40px 5vw; /* antes 60px */
-}
-
-.empresa-card {
-  padding: 20px 15px; /* menos padding */
-  min-height: auto;  /* elimina espacio extra */
-}
-
-.empresa-card h2 {
-  margin-bottom: 10px; /* antes 15px */
-  font-size: 2.6em; /* un poco más compacto */
-      color: rgb(1, 58, 13);
-}
-
-.empresa-card p,
-.valores-lista {
-  font-size: 1.05em; /* más pequeño */
-  line-height: 1.5;
-}
-
 .icono {
   font-size: 1.5rem;
   color: #81d742;
 }
 
-.contacto-info, .formulario-container {
+.contacto-info,
+.formulario-container {
   animation: fadeInUp 0.8s ease-in-out;
 }
 
@@ -825,7 +790,6 @@ nav ul li a.current {
     padding: 30px 20px;
   }
 }
-
 
 .vehiculos-section {
   text-align: center;
@@ -870,7 +834,7 @@ nav ul li a.current {
   bottom: 0;
   width: 100%;
   padding: 20px;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   color: #fff;
   text-align: left;
 }
@@ -880,7 +844,6 @@ nav ul li a.current {
   margin-bottom: 8px;
   color: rgb(255, 255, 255);
   -webkit-text-stroke: 0.25px rgb(1, 58, 13); /* grosor y color del borde */
-
 }
 
 .descripcion p {
@@ -899,7 +862,7 @@ nav ul li a.current {
 .indicadores span {
   width: 12px;
   height: 12px;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -909,8 +872,14 @@ nav ul li a.current {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(1.05);}
-  to { opacity: 1; transform: scale(1);}
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Estilos para las páginas por departamento */
@@ -924,6 +893,7 @@ nav ul li a.current {
   margin: auto;
   margin-bottom: 50px;
   text-align: justify;
+  color: white;
 }
 
 .departamento-intro h2 {
@@ -969,7 +939,7 @@ nav ul li a.current {
   max-height: 500px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 /* Responsive */
@@ -994,7 +964,7 @@ nav ul li a.current {
   padding: 20px 50px;
   border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
   max-width: 90%;
 }
@@ -1002,13 +972,12 @@ nav ul li a.current {
 .cta-button:hover {
   background: linear-gradient(135deg, #00e676, #00c853);
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
-
 
 .titulo-header {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   line-height: 1.2;
 }
 
@@ -1027,14 +996,14 @@ nav ul li a.current {
 /* Teléfonos */
 @media (max-width: 768px) {
   header {
-    flex-direction: row;     
+    flex-direction: row;
     justify-content: flex-start;
     text-align: left;
     gap: 8px;
   }
 
   .logo {
-    max-width: 70px;          
+    max-width: 70px;
     height: auto;
   }
 
@@ -1078,7 +1047,12 @@ nav ul li a.current {
   right: 20px;
   color: #fff;
   text-align: left;
-  background: rgba(0,0,0,0.4); /* fondo semitransparente para mejorar lectura */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* fondo semitransparente para mejorar lectura */
   padding: 10px 15px;
   border-radius: 8px;
 }
@@ -1099,7 +1073,7 @@ nav ul li a.current {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
   padding: 10px 15px;
@@ -1110,17 +1084,19 @@ nav ul li a.current {
 
 .carruselsl .prev:hover,
 .carruselsl .next:hover {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
 }
 
-.carruselsl .prev { left: 10px; }
-.carruselsl .next { right: 10px; }
+.carruselsl .prev {
+  left: 10px;
+}
+.carruselsl .next {
+  right: 10px;
+}
 
 /* 📱 Ajustes para móviles */
 /* Carrusel en escritorio (pantallas grandes) */
 @media (min-width: 769px) {
-
-
   .carruselsl picture,
   .carruselsl img {
     width: 100%;
@@ -1142,11 +1118,6 @@ nav ul li a.current {
     object-fit: contain; /* mantiene toda la imagen visible */
   }
 }
-
-
-
-
-
 
 /* turismo */
 .turismo {
@@ -1171,7 +1142,7 @@ nav ul li a.current {
   background: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -1179,12 +1150,11 @@ nav ul li a.current {
   width: 100%;
   height: 150px;
   object-fit: cover;
-  
 }
 a.servicio-card {
   text-decoration: none;
   color: inherit;
-  display: block; 
+  display: block;
 }
 
 .servicio-card h3 {
