@@ -237,46 +237,38 @@ footer {
 }
 
 header {
-  background-color: rgb(255, 255, 255);
-  display: flex;
+    display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding: 15px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1;
+  color: #fff;
+  padding: 10px 30px;
+  
+  background-color: rgb(255, 255, 255);
+  
 }
 
 .logo {
   height: clamp(60px, 8vw, 100px);
 }
 
-header h1 {
-  margin: 0;
-  font-size: clamp(1.8rem, 4vw, 3rem);
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
+
+
 
 header h1 a {
   color: rgb(0, 80, 17);
   text-decoration: none;
 }
 
-header h2 {
-  margin: 5px 0 0;
-  font-weight: normal;
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
-  color: #000000;
-}
 
 nav ul {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.97);
-  padding: 1px 126px;
   list-style: none;
-  margin: 0;
+  gap: 20px;
 }
 
 nav ul li {
