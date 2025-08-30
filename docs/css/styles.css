@@ -724,7 +724,7 @@ nav ul li a.current {
 .btn-whatsapp {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   background: #25d366;
   color: white;
   font-size: 24px;
@@ -1158,3 +1158,32 @@ a.servicio-card {
 .servicio-card:hover {
   transform: translateY(-5px);
 }
+
+
+
+  #btnUp {
+    display: none; /* Oculto por defecto hasta que hagas scroll */
+    position: fixed;
+    bottom: -20px;
+    right: 20px;    transform: translateY(-50%);
+    z-index: 99;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: #28a745; /* Verde */
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 6px; /* Cuadrado con bordes sutiles */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    opacity: 0.3; /* Oculto/transparente */
+    transition: opacity 0.3s ease, transform 0.2s ease;
+  }
+
+  /* Cuando el mouse pasa por encima */
+  #btnUp:hover {
+    opacity: 1; /* Se ve completo */
+    transform: translateY(-50%) scale(1.1); /* Efecto de zoom */
+    background: #218838; /* Verde más oscuro */
+  }
