@@ -15,19 +15,19 @@ function showSlide(n) {
 function autoSlide() {
   index++;
   showSlide(index);
-  timer = setTimeout(autoSlide, 6000); // cada 6s
+  timer = setTimeout(autoSlide, 8000); // cada 8s
 }
 
 document.querySelector(".prev").addEventListener("click", () => {
   clearTimeout(timer); 
   showSlide(index - 1);
-  timer = setTimeout(autoSlide, 6000);
+  timer = setTimeout(autoSlide, 8000);
 });
 
 document.querySelector(".next").addEventListener("click", () => {
   clearTimeout(timer);
   showSlide(index + 1);
-  timer = setTimeout(autoSlide, 6000);
+  timer = setTimeout(autoSlide, 8000);
 });
 
 // Iniciar

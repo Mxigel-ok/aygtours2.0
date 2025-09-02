@@ -82,8 +82,7 @@
         <p>
           Somos tu aliado confiable en transporte y turismo en Colombia.
           Ofrecemos turismo de transporte especial, traslados ejecutivos,
-          recorridos turísticos y soluciones personalizadas para empresas
-          viajeros.
+          recorridos turísticos y soluciones personalizadas para todo tipo de empresas.
         </p>
         <p>
           En A&G TOURS, trabajamos 24/7 con vehículos modernos, cómodos y
@@ -147,42 +146,67 @@
           Estamos en las principales capitales de Colombia y en ciudades
           intermedias para prestar el servicio de transporte especial de
           pasajeros en vehículos confortables. Solicita tus servicios de
-          transporte, logística y turismo desde cualquier lugar a través de
+          transporte y turismo desde cualquier lugar a través de
           nuestra página web. En A&G TOURS tenemos operación a nivel nacional.
         </p>
       </div>
     </section>
-    <section class="turismo">
-      <h2>SOLUCIONES DE TRANSPORTE ESPECIAL</h2>
-      <div class="turismo-grid">
-        <div class="servicio-card">
-          <img src="img/vehiculos/img/vehiculo1.webp" alt="Empresarial" />
-          <h3>Empresarial</h3>
-        </div>
-        <div class="servicio-card">
-          <img src="img/vehiculos/img/vehiculo2.webp" alt="Escolar" />
-          <h3>Escolar</h3>
-        </div>
-        <div class="servicio-card">
-          <img src="img/vehiculos/img/vehiculo3.webp" alt="Transporte VIP" />
-          <h3>Transporte VIP</h3>
-        </div>
-        <a href="turismo.html" class="servicio-card">
-          <img src="img/vehiculos/img/vehiculo4.webp" alt="Turismo" />
-          <h3>Turismo</h3>
-        </a>
-        <div class="servicio-card">
-          <img
-            src="img/vehiculos/img/vehiculo7.webp"
-            alt="Usuarios de la salud"
-          />
-          <h3>Usuarios de la salud</h3>
-        </div>
-      </div>
-    </section>
+    <section class="servicios">
+  <h2>SOLUCIONES DE TRANSPORTE ESPECIAL</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="img/empresarial.jpg" alt="Transporte Empresarial" />
+      <h3>Empresarial</h3>
+      <p>Traslados seguros y puntuales para empleados y ejecutivos, garantizando confort y eficiencia en los desplazamientos diarios.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/vip.jpg" alt="Transporte VIP" />
+      <h3>Transporte VIP</h3>
+      <p>Vehículos de lujo con todas las comodidades, perfectos para directivos, invitados especiales y eventos exclusivos.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/turismo.jpg" alt="Turismo" />
+      <h3>Turismo</h3>
+      <p>Soluciones a medida para grupos turísticos, excursiones y recorridos por las principales ciudades y destinos del país.</p>
+    </div>
+
+    <div class="card">
+      <img src="img/salud.jpg" alt="Usuarios de la salud" />
+      <h3>Usuarios de la salud</h3>
+      <p>Transporte especializado para pacientes y acompañantes, asegurando comodidad y cumplimiento en sus citas médicas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARRUSEL DE VEHÍCULOS -->
+<section class="carrusel-vehiculos">
+  <h2>Nuestros Vehículos</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/vehiculos/img/vehiculo1.webp" alt="Vehículo 1"></div>
+      <div class="swiper-slide"><img src="img/vehiculos/img/vehiculo2.webp" alt="Vehículo 2"></div>
+      <div class="swiper-slide"><img src="img/vehiculos/img/vehiculo3.webp" alt="Vehículo 3"></div>
+      <div class="swiper-slide"><img src="img/vehiculos/img/vehiculo4.webp" alt="Vehículo 4"></div>
+    </div>
+    <!-- Flechas -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <!-- Paginación -->
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- Swiper JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
     <button id="btnUp" title="Subir">⬆</button>
     <script src="js/botonup.js"></script>
-
+    <script src="js/carruselvh.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/carruselsl.js"></script>
   </body>
