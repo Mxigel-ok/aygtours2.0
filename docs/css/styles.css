@@ -1230,8 +1230,8 @@ a.servicio-card {
 
 .card img {
   width: 100%;
-  height: 200px; /* todas las imágenes tendrán la misma altura */
-  object-fit: cover; /* recorta y centra sin deformar */
+  height: auto; /* todas las imágenes tendrán la misma altura */
+  object-fit: contain; /* recorta y centra sin deformar */
   border-radius: 12px;
   margin-bottom: 15px;
 }
