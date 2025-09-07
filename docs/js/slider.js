@@ -1,12 +1,26 @@
-document.querySelectorAll(".slider").forEach((slider) => {
-  let slides = slider.querySelectorAll("img");
-  let index = 0;
+document.addEventListener('DOMContentLoaded', function () {
+  // Selecciona todos los carruseles que tengan imágenes con la clase 'active'
+  const carruseles = document.querySelectorAll('[class^="carrusel-"]');
+  let indices = Array.from(carruseles, () => 0);
 
-  slides[0].classList.add("active");
+  function mostrarSlides() {
+    carruseles.forEach((carrusel, idx) => {
+      const slides = carrusel.querySelectorAll('img');
+      slides.forEach((img, i) => {
+        img.classList.toggle('active', i === indices[idx]);
+      });
+    });
+  }
 
-  setInterval(() => {
-    slides[index].classList.remove("active");
-    index = (index + 1) % slides.length;
-    slides[index].classList.add("active");
-  }, 3000);
+  function siguienteSlide() {
+    carruseles.forEach((carrusel, idx) => {
+      const slides = carrusel.querySelectorAll('img');
+      indices[idx] = (indices[idx] + 1) % slides.length;
+    });
+    mostrarSlides();
+  }
+
+  // Inicializa
+  mostrarSlides();
+  setInterval(siguienteSlide, 3500);
 });
