@@ -5,7 +5,6 @@ const indicadores = document.querySelector(".indicadores");
 
 let index = 0;
 
-// Crear puntos indicadores dinámicos
 slides.forEach((_, i) => {
   const dot = document.createElement("span");
   if (i === 0) dot.classList.add("active");

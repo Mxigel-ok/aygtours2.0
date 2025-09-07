@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A&G TOURS | Eventos del Mes</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      }
+      header {
+        text-align: center;
+        padding: 50px 20px;
+        background: #ff6f61;
+        color: white;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+      }
+      header h1 {
+        font-size: 2.5em;
+        margin: 0;
+      }
+      .contenedor {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+      .eventos-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+      .evento {
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+      .evento:hover {
+        transform: translateY(-10px);
+      }
+      .evento img {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 15px;
+      }
+      .evento h3 {
+        color: #ff6f61;
+        margin-bottom: 10px;
+      }
+      .agenda {
+        margin-top: 50px;
+      }
+      .agenda h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #ff6f61;
+      }
+      .agenda ul {
+        list-style: none;
+        padding: 0;
+      }
+      .agenda li {
+        background: white;
+        margin: 10px 0;
+        padding: 15px;
+        border-left: 5px solid #ff6f61;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🌟 Eventos de Septiembre en Barranquilla 🌟</h1>
+      <p>Descubre lugares increíbles y actividades únicas este mes</p>
+    </header>
+
+    <div class="contenedor">
+      <section class="amor-amistad">
+        <h2>💖 Amor y Amistad en Barranquilla 💖</h2>
+        <p>
+          Este <strong>20 de septiembre</strong> celebramos el Amor y la Amistad
+          en Barranquilla. Una fecha perfecta para compartir con tu pareja o
+          amigos en planes únicos por la ciudad.
+        </p>
+        <br />
+
+        <div class="eventos-grid">
+          <div class="evento">
+            <img src="img/cena-romantica.jpg" alt="Cena Romántica" />
+            <h3>Cenas Románticas</h3>
+            <p>
+              Los restaurantes más exclusivos de la ciudad ofrecen menús
+              especiales para parejas.
+            </p>
+          </div>
+
+          <div class="evento">
+            <img src="img/fiesta-amigos.jpg" alt="Fiesta con amigos" />
+            <h3>Fiestas y Rumbas</h3>
+            <p>
+              Discotecas y bares se llenan de promociones para grupos de amigos
+              y parejas.
+            </p>
+          </div>
+
+          <div class="evento">
+            <img src="img/regalos.jpg" alt="Regalos y flores" />
+            <h3>Detalles Especiales</h3>
+            <p>
+              Flores, serenatas y regalos en centros comerciales hacen parte de
+              la tradición.
+            </p>
+          </div>
+        </div>
+      </section>
+      <br />
+      <section class="eventos-grid">
+        <div class="evento">
+          <img src="img/malecon.jpg" alt="Malecón del Río" />
+          <h3>Malecón del Río</h3>
+          <p>
+            Un lugar perfecto para caminar, disfrutar de la brisa del río
+            Magdalena y probar comida típica.
+          </p>
+        </div>
+
+        <div class="evento">
+          <img src="img/carnaval.jpg" alt="Carnavalito" />
+          <h3>Carnavalito de Barranquilla</h3>
+          <p>
+            Un adelanto del famoso carnaval, con música, danzas y colorido.
+            ¡Imperdible este septiembre!
+          </p>
+        </div>
+
+        <div class="evento">
+          <img src="img/zoo.jpg" alt="Zoológico" />
+          <h3>Zoológico de Barranquilla</h3>
+          <p>
+            Ideal para ir en familia y conocer la fauna local y mundial en un
+            espacio educativo y divertido.
+          </p>
+        </div>
+      </section>
+
+      <section class="agenda">
+        <h2>📅 Agenda del Mes</h2>
+        <ul>
+          <li>
+            <strong>10 de Septiembre:</strong> Feria Gastronómica en el Malecón.
+          </li>
+          <li>
+            <strong>15 de Septiembre:</strong> Concierto de música caribeña en
+            la Plaza de la Paz.
+          </li>
+          <li>
+            <strong>20 de Septiembre:</strong> El dia del Amor y la Amistad, con
+            cenas románticas, fiestas y detalles especiales.
+          </li>
+
+          <li>
+            <strong>21 de Septiembre:</strong> Festival de Danza Folclórica.
+          </li>
+          <li>
+            <strong>28 de Septiembre:</strong> Exhibición de arte local en el
+            Museo del Caribe.
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

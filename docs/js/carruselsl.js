@@ -3,12 +3,12 @@ let slides = document.querySelectorAll(".carruselsl .slide");
 let timer;
 
 function showSlide(n) {
-  slides.forEach(slide => slide.classList.remove("active"));
-  
+  slides.forEach((slide) => slide.classList.remove("active"));
+
   if (n >= slides.length) index = 0;
   else if (n < 0) index = slides.length - 1;
   else index = n;
-  
+
   slides[index].classList.add("active");
 }
 
@@ -19,7 +19,7 @@ function autoSlide() {
 }
 
 document.querySelector(".prev").addEventListener("click", () => {
-  clearTimeout(timer); 
+  clearTimeout(timer);
   showSlide(index - 1);
   timer = setTimeout(autoSlide, 8000);
 });
@@ -30,6 +30,6 @@ document.querySelector(".next").addEventListener("click", () => {
   timer = setTimeout(autoSlide, 8000);
 });
 
-// Iniciar
+
 showSlide(index);
 autoSlide();

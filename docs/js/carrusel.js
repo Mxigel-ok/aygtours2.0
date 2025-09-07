@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const carrusel = document.querySelector('.carrusel');
-  const imagenes = carrusel.querySelectorAll('img');
-  const btnIzq = carrusel.querySelector('.carrusel-flecha.izq');
-  const btnDer = carrusel.querySelector('.carrusel-flecha.der');
+document.addEventListener("DOMContentLoaded", function () {
+  const carrusel = document.querySelector(".carrusel");
+  const imagenes = carrusel.querySelectorAll("img");
+  const btnIzq = carrusel.querySelector(".carrusel-flecha.izq");
+  const btnDer = carrusel.querySelector(".carrusel-flecha.der");
   let actual = 0;
   let intervalo;
 
   function mostrarImagen(index) {
     imagenes.forEach((img, i) => {
-      img.classList.toggle('active', i === index);
+      img.classList.toggle("active", i === index);
     });
   }
 
@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', function () {
   mostrarImagen(actual);
   intervalo = setInterval(siguienteImagen, 3000);
 
-  btnDer.addEventListener('click', () => {
+  btnDer.addEventListener("click", () => {
     siguienteImagen();
     reiniciarIntervalo();
   });
-  btnIzq.addEventListener('click', () => {
+  btnIzq.addEventListener("click", () => {
     anteriorImagen();
     reiniciarIntervalo();
   });
