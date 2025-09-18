@@ -3,176 +3,195 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A&G TOURS | Eventos del Mes</title>
+    <title>A&G TOURS | Eventos Amor y Amistad en Barranquilla</title>
     <link rel="stylesheet" href="css/styles.css" />
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-      }
-      header {
-        text-align: center;
-        padding: 50px 20px;
-        background: #ff6f61;
-        color: white;
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-      }
-      header h1 {
-        font-size: 2.5em;
-        margin: 0;
-      }
-      .contenedor {
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px;
-      }
-      .eventos-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-      }
-      .evento {
-        background: white;
-        border-radius: 20px;
-        padding: 20px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-      }
-      .evento:hover {
-        transform: translateY(-10px);
-      }
-      .evento img {
-        width: 100%;
-        border-radius: 15px;
-        margin-bottom: 15px;
-      }
-      .evento h3 {
-        color: #ff6f61;
-        margin-bottom: 10px;
-      }
-      .agenda {
-        margin-top: 50px;
-      }
-      .agenda h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #ff6f61;
-      }
-      .agenda ul {
-        list-style: none;
-        padding: 0;
-      }
-      .agenda li {
-        background: white;
-        margin: 10px 0;
-        padding: 15px;
-        border-left: 5px solid #ff6f61;
-        border-radius: 10px;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-      }
-    </style>
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
-  <body>
+
+  <body class="amor-y-amistad">
     <header>
-      <h1>🌟 Eventos de Septiembre en Barranquilla 🌟</h1>
-      <p>Descubre lugares increíbles y actividades únicas este mes</p>
+      <div class="logo-container">
+        <img src="img/logo2.webp" alt="Logo A&G Tours" class="logo" />
+        <div class="titulo-header">
+          <h1><a href="./">A&G TOURS</a></h1>
+          <h2>Somos tu aliado en transporte y turismo</h2>
+        </div>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+      <nav>
+        <ul>
+          <li><a href="./">Inicio</a></li>
+          <li><a href="nuestraempresa">Nuestra Empresa</a></li>
+          <li><a href="turismo">Turismo</a></li>
+          <li><a href="eventos" class="current">Eventos</a></li>
+          <li><a href="vehiculos">Vehículos</a></li>
+          <li><a href="contacto">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="contenedor">
-      <section class="amor-amistad">
-        <h2>💖 Amor y Amistad en Barranquilla 💖</h2>
+    <main class="eventos-page">
+      <div class="floating-hearts"></div>
+
+      <section class="eventos-intro animate-fade-in">
+        <span class="heart-icon">❤️</span>
+        <h2>Vive el Amor y la Amistad en Barranquilla</h2>
         <p>
-          Este <strong>20 de septiembre</strong> celebramos el Amor y la Amistad
-          en Barranquilla. Una fecha perfecta para compartir con tu pareja o
-          amigos en planes únicos por la ciudad.
+          Este septiembre, Barranquilla se viste de romance y alegría para
+          celebrar el mes del Amor y la Amistad. Es la ocasión perfecta para
+          sorprender a esa persona especial, compartir con amigos y vivir
+          momentos inolvidables en la ciudad más alegre de Colombia. Disfruta de
+          cenas románticas, planes únicos y eventos que llenarán de magia tus
+          días, mientras nosotros en
+          <strong>A&G TOURS</strong> te acompañamos con el transporte y la
+          comodidad que necesitas para que solo te concentres en disfrutar.
         </p>
-        <br />
 
-        <div class="eventos-grid">
-          <div class="evento">
-            <img src="img/cena-romantica.jpg" alt="Cena Romántica" />
-            <h3>Cenas Románticas</h3>
-            <p>
-              Los restaurantes más exclusivos de la ciudad ofrecen menús
-              especiales para parejas.
-            </p>
+        <span class="heart-icon">❤️</span>
+      </section>
+      <section class="restaurantes">
+        <h3>Restaurantes Románticos</h3>
+        <div class="cards-grid">
+          <!-- Card 1 -->
+          <div class="card-restaurante animate-fade-in">
+            <img src="img/eventosF1.jpeg" alt="Restaurante Varadero" />
+            <div class="card-content">
+              <h4>Varadero Pescados y Mariscos</h4>
+              <p>
+                Un clásico de Barranquilla con ambiente caribeño, música en vivo
+                y una propuesta culinaria que celebra los sabores del mar.
+              </p>
+
+              <a href="https://wa.me/573163337833" class="btn-reserva"
+                >Contactanos</a
+              >
+            </div>
           </div>
 
-          <div class="evento">
-            <img src="img/fiesta-amigos.jpg" alt="Fiesta con amigos" />
-            <h3>Fiestas y Rumbas</h3>
-            <p>
-              Discotecas y bares se llenan de promociones para grupos de amigos
-              y parejas.
-            </p>
+          <!-- Card 2 -->
+          <div
+            class="card-restaurante animate-fade-in"
+            style="animation-delay: 0.2s"
+          >
+            <img src="img/eventosF2.jpeg" alt="Cucayo Restaurante" />
+            <div class="card-content">
+              <h4>Cucayo</h4>
+              <p>
+                Cocina creativa que combina tradición y modernidad. Platos
+                inspirados en ingredientes locales, en un espacio cálido y
+                acogedor.
+              </p>
+
+              <a href="https://wa.me/573163337833" class="btn-reserva"
+                >Contactanos</a
+              >
+            </div>
           </div>
 
-          <div class="evento">
-            <img src="img/regalos.jpg" alt="Regalos y flores" />
-            <h3>Detalles Especiales</h3>
-            <p>
-              Flores, serenatas y regalos en centros comerciales hacen parte de
-              la tradición.
-            </p>
+          <!-- Card 3 -->
+          <div
+            class="card-restaurante animate-fade-in"
+            style="animation-delay: 0.4s"
+          >
+            <img src="img/eventosF3.webp" alt="Storia D'Amore" />
+            <div class="card-content">
+              <h4>Storia D'Amore</h4>
+              <p>
+                Inspirado en la auténtica cocina italiana, ofrece un ambiente
+                elegante con terrazas románticas perfectas para brindar bajo las
+                estrellas.
+              </p>
+              <a href="https://wa.me/573163337833" class="btn-reserva"
+                >Contactanos</a
+              >
+            </div>
           </div>
         </div>
       </section>
-      <br />
-      <section class="eventos-grid">
-        <div class="evento">
-          <img src="img/malecon.jpg" alt="Malecón del Río" />
-          <h3>Malecón del Río</h3>
-          <p>
-            Un lugar perfecto para caminar, disfrutar de la brisa del río
-            Magdalena y probar comida típica.
-          </p>
-        </div>
 
-        <div class="evento">
-          <img src="img/carnaval.jpg" alt="Carnavalito" />
-          <h3>Carnavalito de Barranquilla</h3>
-          <p>
-            Un adelanto del famoso carnaval, con música, danzas y colorido.
-            ¡Imperdible este septiembre!
-          </p>
-        </div>
-
-        <div class="evento">
-          <img src="img/zoo.jpg" alt="Zoológico" />
-          <h3>Zoológico de Barranquilla</h3>
-          <p>
-            Ideal para ir en familia y conocer la fauna local y mundial en un
-            espacio educativo y divertido.
-          </p>
+      <section class="agenda-mes">
+        <h3><i class="fas fa-calendar-heart"></i> Agenda del Mes</h3>
+        <div class="timeline">
+          <div class="timeline-item animate-slide-up">
+            <div class="date">15 Sept</div>
+            <div class="content">
+              <h4>Mes del Patrimonio y Carnaval de la 44</h4>
+              <p>Plaza de la Paz | Barranquilla</p>
+            </div>
+          </div>
+          <div
+            class="timeline-item animate-slide-up"
+            style="animation-delay: 0.2s"
+          >
+            <div class="date">16 Sept</div>
+            <div class="content">
+              <h4>Caribe Huele a Pan</h4>
+              <p>Hotel El Prado | Barranquilla</p>
+            </div>
+          </div>
+          <div
+            class="timeline-item animate-slide-up"
+            style="animation-delay: 0.4s"
+          >
+            <div class="date">20 Sept</div>
+            <div class="content">
+              <h4>Hansel & Raul, los íconos de la música tropical</h4>
+              <p>Mou’s Restaurante Bar. | Barranquilla</p>
+            </div>
+          </div>
+          <div
+            class="timeline-item animate-slide-up"
+            style="animation-delay: 0.4s"
+          >
+            <div class="date">20 Sept</div>
+            <div class="content">
+              <h4>Concierto Silvestre Dangond</h4>
+              <p>Estadio Metropolitano | Barranquilla</p>
+            </div>
+          </div>
         </div>
       </section>
-
-      <section class="agenda">
-        <h2>📅 Agenda del Mes</h2>
-        <ul>
-          <li>
-            <strong>10 de Septiembre:</strong> Feria Gastronómica en el Malecón.
-          </li>
-          <li>
-            <strong>15 de Septiembre:</strong> Concierto de música caribeña en
-            la Plaza de la Paz.
-          </li>
-          <li>
-            <strong>20 de Septiembre:</strong> El dia del Amor y la Amistad, con
-            cenas románticas, fiestas y detalles especiales.
-          </li>
-
-          <li>
-            <strong>21 de Septiembre:</strong> Festival de Danza Folclórica.
-          </li>
-          <li>
-            <strong>28 de Septiembre:</strong> Exhibición de arte local en el
-            Museo del Caribe.
-          </li>
-        </ul>
+      <section class="videos-eventos">
+        <h3><i class="fa-solid fa-video"></i> Videos de Eventos</h3>
+        <div class="videos-grid">
+          <div class="video-card">
+            <iframe
+              width="560"
+              height="315"
+              src="https://drive.google.com/file/d/138uv5oAUDIb8idrbmOF_suv5v93w7Xqo/preview"
+              title="Video de Evento"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
       </section>
-    </div>
+    </main>
+
+    <a
+      href="https://wa.me/573163337833"
+      class="btn-whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <button id="btnUp" title="Subir">
+      <i class="fa-solid fa-up-long"></i>
+    </button>
+
+    <script src="js/menu.js"></script>
+    <script src="js/botonup.js"></script>
   </body>
 </html>

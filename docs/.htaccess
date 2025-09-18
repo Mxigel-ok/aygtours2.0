@@ -1,0 +1,28 @@
+Options +FollowSymLinks -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# Página por defecto
+DirectoryIndex index.html turismo.html
+
+# No reescribir si el archivo o carpeta existe
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Redirigir .html a versión sin .html
+RewriteCond %{THE_REQUEST} \s/+([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Permitir acceder a archivos .html sin escribir la extensión
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# Redirigir index.html -> /
+RewriteCond %{THE_REQUEST} \s/+(index)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
+RewriteRule ^index$ / [R=301,L]
+
+# 🚀 Regla especial para turismo.html
+RewriteRule ^turismo/?$ turismo.html [L]
