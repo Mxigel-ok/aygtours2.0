@@ -2,19 +2,19 @@ Options +FollowSymLinks -MultiViews
 RewriteEngine On
 RewriteBase /
 
-# Página por defecto
+# Páginas por defecto
 DirectoryIndex index.html turismo.html
 
-# No reescribir si el archivo o carpeta existe
+# No reescribir si existe archivo o carpeta
 RewriteCond %{REQUEST_FILENAME} -d [OR]
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
-# Redirigir .html a versión sin .html
+# Quitar .html de la URL
 RewriteCond %{THE_REQUEST} \s/+([^.]+)\.html [NC]
 RewriteRule ^ %1 [R=301,L]
 
-# Permitir acceder a archivos .html sin escribir la extensión
+# Permitir acceder a .html sin escribir la extensión
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
@@ -24,5 +24,12 @@ RewriteCond %{THE_REQUEST} \s/+(index)\.html [NC]
 RewriteRule ^ %1 [R=301,L]
 RewriteRule ^index$ / [R=301,L]
 
-# 🚀 Regla especial para turismo.html
+# 🚀 Turismo principal
 RewriteRule ^turismo/?$ turismo.html [L]
+
+# 🚀 Alias para departamentos (URL limpia)
+RewriteRule ^turismo/([^/]+)/?$ turismo/departamentos/$1.html [L]
+
+# 🔄 Redirección de la URL vieja con "departamentos" a la nueva
+RewriteCond %{THE_REQUEST} \s/turismo/departamentos/([^\s?]+) [NC]
+RewriteRule ^ /turismo/%1 [R=301,L]

@@ -1557,6 +1557,17 @@ nav ul li a[href="eventos"].current::after {
   color: #ff0000;
 }
 
+.videos-vehiculos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.videos-vechiculos h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
 .videos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
