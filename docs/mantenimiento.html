@@ -11,10 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg1:#0f1226; /* base */
-      --bg2:#151a3c; /* dark */
-      --acc1:#00e0ff; /* cyan */
-      --acc2:#8a5cff; /* violet */
+      --bg1:#0f1226; 
+      --bg2:#151a3c; 
+      --acc1:#00e0ff; 
+      --acc2:#8a5cff; 
       --text:#e8ebff;
       --muted:#a3a9c9;
     }
@@ -27,7 +27,6 @@
       background: radial-gradient(1200px 800px at 10% 10%, #1a1740 0%, #0d0f22 60%, #0a0c19 100%) fixed;
       overflow:hidden;
     }
-    /* Animated gradient orbs */
     .orbs{position:fixed; inset:0; overflow:hidden; z-index:-1; filter:blur(60px);}
     .orb{position:absolute; width:40vmax; height:40vmax; border-radius:50%; opacity:.6; mix-blend-mode:screen;}
     .orb.o1{background:radial-gradient(circle at 30% 30%, var(--acc1), transparent 60%); left:-10vmax; top:-10vmax; animation:float1 16s ease-in-out infinite alternate;}
@@ -35,7 +34,6 @@
     @keyframes float1{to{transform:translate(6vmax,5vmax)}}
     @keyframes float2{to{transform:translate(-6vmax,-4vmax)}}
 
-    /* Subtle star particles */
     .stars{position:fixed; inset:0; background-image:
       radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,.15) 50%, transparent 51%),
       radial-gradient(1.5px 1.5px at 65% 70%, rgba(255,255,255,.15) 50%, transparent 51%),
@@ -72,7 +70,6 @@
     .title{font-size: clamp(28px, 4.2vw, 44px); margin:0; font-weight:800; line-height:1.05}
     .subtitle{margin:6px 0 0; color:var(--muted); font-size: clamp(14px, 2.1vw, 18px)}
 
-    /* SVG icon + pulse */
     .icon-wrap{display:flex; align-items:center; gap:16px; margin-top:12px}
     .gear{width:56px; height:56px; animation:spin 8s linear infinite; filter:drop-shadow(0 10px 24px rgba(0, 224, 255,.25));}
     @keyframes spin{to{transform:rotate(360deg)}}
@@ -89,7 +86,6 @@
 
     footer{margin-top:18px; color:var(--muted); font-size:12px}
 
-    /* Responsive */
     @media (min-width: 860px){
       .content{grid-template-columns: 1.2fr .8fr; align-items:center}
       .right{justify-self:end}

@@ -97,12 +97,12 @@ body {
 
 .bienvenida-section {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* texto mitad - imagen mitad */
+  grid-template-columns: 1fr 1fr; 
   gap: 40px;
   padding: 60px 5vw;
   background: rgba(0, 80, 17, 0.548);
   color: #fff;
-  align-items: center; /* centra vertical */
+  align-items: center; 
   min-height: 70vh;
 }
 
@@ -130,20 +130,46 @@ body {
 .bienvenida-section .carrusel {
   width: 100%;
   height: 100%;
-  max-width: none; /* quita límite de 600px */
+  max-width: none; 
   border-radius: 40px;
-  margin: 0; /* quita centrado */
-  box-shadow: none; /* quita sombra */
+  margin: 0; 
+  box-shadow: none; 
 }
 
 .bienvenida-section .carrusel img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* la imagen rellena */
+  object-fit: cover; 
   display: block;
   opacity: 1;
 }
 
+/* =================
+   MEDIA QUERIES 
+   ================= */
+
+/* Tablets y dispositivos medianos (hasta 968px) */
+@media (max-width: 968px) {
+  .contacto-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-info,
+  .formulario-container {
+    padding: 40px 30px;
+  }
+
+  .contacto-whatsapp h2 {
+    font-size: 1.8rem;
+  }
+
+  .boton-whatsapp {
+    padding: 18px 30px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablets (hasta 900px) */
 @media (max-width: 900px) {
   .empresa-section {
     flex-direction: column;
@@ -159,6 +185,7 @@ body {
     width: 100%;
     box-sizing: border-box;
   }
+
   .bienvenida-section {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -169,50 +196,187 @@ body {
     height: 100%;
     margin: auto;
   }
+
+  .departamento-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
+/* Tablets pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 8px;
+  }
+
+  .logo {
+    max-width: 70px;
+    height: auto;
+  }
+
+  .titulo-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .titulo-header h2 {
+    font-size: 0.9rem;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 45px;
+  }
+
+  .timeline-item .date {
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .timeline-item .content {
+    width: 100%;
+  }
+
+  .carrusel {
+    height: auto;
+  }
+
+  .carrusel picture,
+  .carrusel img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* Móviles (hasta 700px) */
+@media (max-width: 700px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgba(0, 80, 17, 0.95), rgba(0, 60, 13, 0.95));
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 24px;
+    z-index: 1000;
+    box-shadow: 0 4px 16px #0008;
+    border-bottom: 3px solid rgba(0, 80, 17, 0.95);
+    border-radius: 0 0 16px 16px;
+    transition: max-height 0.3s ease-out;
+  }
+
+  nav ul.show {
+    display: flex;
+    max-height: 100vh;
+    animation: slideDown 0.3s ease-out;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* Móviles (hasta 600px) */
 @media (max-width: 600px) {
   header h1 {
     font-size: 1.1em;
   }
+
   header h2 {
     font-size: 0.95em;
   }
+
   nav ul {
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
+
   nav ul li {
     margin: 8px 0;
   }
+
+  nav ul li a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
   .bienvenida-section,
   .empresa-section {
     padding: 8px 1vw;
   }
+
   .bienvenida-texto h2 {
     font-size: 1.3em;
     padding-inline: 0;
   }
+
   .bienvenida-texto p {
     font-size: 1em;
-    padding: 15px ;
+    padding: 15px;
   }
+
   .carrusel img {
     border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* la imagen rellena */
-    display: block;
-    opacity: 1;
   }
 
   .empresa-texto h2 {
     font-size: 2.6em;
     padding-inline: 0;
   }
+
   .empresa-texto p {
     font-size: 1em;
+  }
+
+  .carrusel-flecha {
+    font-size: 1.3em;
+    padding: 0 7px;
+  }
+
+  .contacto-info h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .mensaje-principal h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .info-contacto {
+    gap: 15px;
+  }
+
+  .formulario-container {
+    padding: 30px 20px;
   }
 }
 
@@ -583,26 +747,6 @@ nav ul li a.current {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 968px) {
-  .contacto-container {
-    grid-template-columns: 1fr;
-  }
-
-  .contacto-info,
-  .formulario-container {
-    padding: 40px 30px;
-  }
-
-  .contacto-whatsapp h2 {
-    font-size: 1.8rem;
-  }
-
-  .boton-whatsapp {
-    padding: 18px 30px;
-    font-size: 1.1rem;
-  }
-}
-
 .turismo-section {
   text-align: center;
   padding: 40px 20px;
@@ -773,23 +917,6 @@ nav ul li a.current {
   }
 }
 
-@media (max-width: 600px) {
-  .contacto-info h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-  .mensaje-principal h2 {
-    font-size: 1.4rem;
-    text-align: center;
-  }
-  .info-contacto {
-    gap: 15px;
-  }
-  .formulario-container {
-    padding: 30px 20px;
-  }
-}
-
 .vehiculos-section {
   text-align: center;
   padding: 50px 20px;
@@ -842,7 +969,7 @@ nav ul li a.current {
   font-size: 1.8rem;
   margin-bottom: 8px;
   color: rgb(255, 255, 255);
-  -webkit-text-stroke: 0.25px rgb(1, 58, 13); /* grosor y color del borde */
+  -webkit-text-stroke: 0.25px rgb(1, 58, 13);
 }
 
 .descripcion p {
@@ -881,7 +1008,6 @@ nav ul li a.current {
   }
 }
 
-/* Estilos para las páginas por departamento */
 .departamento-page {
   padding: 40px 20px;
   animation: fadeInUp 0.8s ease-out;
@@ -940,15 +1066,12 @@ nav ul li a.current {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
-
-/* Responsive */
 @media (max-width: 900px) {
   .departamento-layout {
     grid-template-columns: 1fr;
   }
 }
 
-/* Call To Action centrado */
 .cta {
   text-align: center;
   margin: 60px auto;
@@ -992,7 +1115,6 @@ nav ul li a.current {
   color: #333;
 }
 
-/* Teléfonos */
 @media (max-width: 768px) {
   header {
     flex-direction: row;
@@ -1014,7 +1136,6 @@ nav ul li a.current {
     font-size: 0.9rem;
   }
 }
-/* Carrusel */
 .carruselsl {
   position: relative;
   max-width: 100%;
@@ -1035,10 +1156,10 @@ nav ul li a.current {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover; /* Mantiene proporción sin deformar */
+  object-fit: cover; 
 }
 
-/* Texto encima de la imagen */
+
 .carruselsl .caption {
   position: absolute;
   bottom: 20px;
@@ -1051,7 +1172,7 @@ nav ul li a.current {
     0,
     0,
     0.4
-  ); /* fondo semitransparente para mejorar lectura */
+  ); 
   padding: 10px 15px;
   border-radius: 8px;
 }
@@ -1066,7 +1187,6 @@ nav ul li a.current {
   font-size: 1rem;
 }
 
-/* Botones de navegación */
 .carruselsl .prev,
 .carruselsl .next {
   position: absolute;
@@ -1093,32 +1213,29 @@ nav ul li a.current {
   right: 10px;
 }
 
-/* 📱 Ajustes para móviles */
-/* Carrusel en escritorio (pantallas grandes) */
+
 @media (min-width: 769px) {
   .carruselsl picture,
   .carruselsl img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* recorta sin deformar */
+    object-fit: cover; 
   }
 }
 
-/* Carrusel en móviles */
 @media (max-width: 768px) {
   .carruselsl {
-    height: auto; /* deja que la imagen vertical crezca sola */
+    height: auto; 
   }
 
   .carruselsl picture,
   .carruselsl img {
     width: 100%;
     height: auto;
-    object-fit: contain; /* mantiene toda la imagen visible */
+    object-fit: contain;
   }
 }
 
-/* turismo */
 .turismo {
   padding: 50px 20px;
   text-align: center;
@@ -1167,7 +1284,7 @@ a.servicio-card {
 }
 
 #btnUp {
-  display: none; /* Oculto por defecto hasta que hagas scroll */
+  display: none;
   position: fixed;
   bottom: -20px;
   right: 20px;
@@ -1177,24 +1294,22 @@ a.servicio-card {
   font-weight: bold;
   border: none;
   outline: none;
-  background: #28a745; /* Verde */
+  background: #28a745; 
   color: white;
   cursor: pointer;
   padding: 15px 20px;
-  border-radius: 6px; /* Cuadrado con bordes sutiles */
+  border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  opacity: 0.3; /* Oculto/transparente */
+  opacity: 0.3;
   transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
-/* Cuando el mouse pasa por encima */
 #btnUp:hover {
-  opacity: 1; /* Se ve completo */
-  transform: translateY(-50%) scale(1.1); /* Efecto de zoom */
-  background: #218838; /* Verde más oscuro */
+  opacity: 1; 
+  transform: translateY(-50%) scale(1.1);
+  background: #218838;
 }
 
-/* Vehiculos buscar */
 .servicios {
   text-align: center;
   padding: 50px 20px;
@@ -1227,8 +1342,8 @@ a.servicio-card {
 
 .card img {
   width: 100%;
-  height: auto; /* todas las imágenes tendrán la misma altura */
-  object-fit: contain; /* recorta y centra sin deformar */
+  height: auto; 
+  object-fit: contain; 
   border-radius: 12px;
   margin-bottom: 15px;
 }
@@ -1246,7 +1361,7 @@ a.servicio-card {
 }
 
 .cta-vehiculos {
-  background: #0e7c1d; /* Verde representativo (ejemplo) */
+  background: #0e7c1d;
   color: #ffffff;
   text-align: center;
   padding: 60px 20px;
@@ -1268,7 +1383,7 @@ a.servicio-card {
 
 .cta-btn {
   display: inline-block;
-  background: #3c8345; /* Verde más oscuro para contraste */
+  background: #3c8345;
   color: #fff;
   font-weight: bold;
   padding: 14px 28px;
@@ -1279,11 +1394,10 @@ a.servicio-card {
 }
 
 .cta-btn:hover {
-  background: #23614e; /* Tonalidad aún más oscura en hover */
+  background: #23614e;
   transform: scale(1.05);
 }
 
-/* Estilos para la página de eventos */
 .eventos-page {
   max-width: 1200px;
   margin: 0 auto;
@@ -1339,6 +1453,8 @@ a.servicio-card {
   background: #6ab636;
 }
 
+/* Estilos para la sección de eventos */
+
 .eventos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1366,7 +1482,6 @@ a.servicio-card {
   margin: 10px 0;
 }
 
-/* Estilos para Amor y Amistad */
 .amor-y-amistad {
   background: linear-gradient(
       rgba(255, 255, 255, 0.9),
@@ -1375,7 +1490,6 @@ a.servicio-card {
     url("../img/fondoeventos.jpeg");
 }
 
-/* Header especial para amor y amistad */
 .eventos-page header {
   background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
 }
@@ -1385,7 +1499,6 @@ a.servicio-card {
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
-/* Corazones flotantes */
 .floating-hearts {
   position: fixed;
   top: 0;
@@ -1418,7 +1531,6 @@ a.servicio-card {
   }
 }
 
-/* Timeline para agenda */
 .agenda-mes {
   max-width: 800px;
   margin: 40px auto;
@@ -1470,7 +1582,6 @@ a.servicio-card {
   color: #ff0000;
 }
 
-/* Planes especiales */
 .plan-card {
   background: linear-gradient(135deg, #fff5f5, #ffe9e9);
   padding: 30px;
@@ -1492,7 +1603,6 @@ a.servicio-card {
   font-weight: bold;
 }
 
-/* Mejoras responsive */
 @media (max-width: 768px) {
   .timeline::before {
     left: 30px;
@@ -1515,7 +1625,6 @@ a.servicio-card {
   }
 }
 
-/* Estilo especial para el link de Eventos */
 nav ul li a[href="eventos"]:hover,
 nav ul li a[href="eventos"].current {
   color: #ff4747;
@@ -1534,7 +1643,6 @@ nav ul li a[href="eventos"].current::after {
   animation: heartBeat 1.5s infinite;
 }
 
-/* Animación del corazón */
 @keyframes heartBeat {
   0% {
     transform: translateY(-50%) scale(1);
@@ -1575,17 +1683,15 @@ nav ul li a[href="eventos"].current::after {
   justify-content: center;
 }
 
-/* Contenedor que mantiene proporción 16:9 */
 .video-card {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
+  padding-top: 56.25%; 
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* Video o iframe adaptado */
 .video-card iframe,
 .video-card video {
   position: absolute;
