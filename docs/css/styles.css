@@ -144,32 +144,6 @@ body {
   opacity: 1;
 }
 
-/* =================
-   MEDIA QUERIES 
-   ================= */
-
-/* Tablets y dispositivos medianos (hasta 968px) */
-@media (max-width: 968px) {
-  .contacto-container {
-    grid-template-columns: 1fr;
-  }
-
-  .contacto-info,
-  .formulario-container {
-    padding: 40px 30px;
-  }
-
-  .contacto-whatsapp h2 {
-    font-size: 1.8rem;
-  }
-
-  .boton-whatsapp {
-    padding: 18px 30px;
-    font-size: 1.1rem;
-  }
-}
-
-/* Tablets (hasta 900px) */
 @media (max-width: 900px) {
   .empresa-section {
     flex-direction: column;
@@ -185,7 +159,6 @@ body {
     width: 100%;
     box-sizing: border-box;
   }
-
   .bienvenida-section {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -196,187 +169,50 @@ body {
     height: 100%;
     margin: auto;
   }
-
-  .departamento-layout {
-    grid-template-columns: 1fr;
-  }
 }
 
-/* Tablets pequeñas (hasta 768px) */
-@media (max-width: 768px) {
-  .contenedor {
-    flex-direction: column;
-  }
-
-  header {
-    flex-direction: row;
-    justify-content: flex-start;
-    text-align: left;
-    gap: 8px;
-  }
-
-  .logo {
-    max-width: 70px;
-    height: auto;
-  }
-
-  .titulo-header h1 {
-    font-size: 1.4rem;
-  }
-
-  .titulo-header h2 {
-    font-size: 0.9rem;
-  }
-
-  .timeline::before {
-    left: 30px;
-  }
-
-  .timeline-item {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 45px;
-  }
-
-  .timeline-item .date {
-    text-align: left;
-    padding-right: 0;
-    margin-bottom: 10px;
-  }
-
-  .timeline-item .content {
-    width: 100%;
-  }
-
-  .carrusel {
-    height: auto;
-  }
-
-  .carrusel picture,
-  .carrusel img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-}
-
-/* Móviles (hasta 700px) */
-@media (max-width: 700px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: linear-gradient(135deg, rgba(0, 80, 17, 0.95), rgba(0, 60, 13, 0.95));
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: auto;
-    max-height: 0;
-    overflow: hidden;
-    padding-top: 24px;
-    z-index: 1000;
-    box-shadow: 0 4px 16px #0008;
-    border-bottom: 3px solid rgba(0, 80, 17, 0.95);
-    border-radius: 0 0 16px 16px;
-    transition: max-height 0.3s ease-out;
-  }
-
-  nav ul.show {
-    display: flex;
-    max-height: 100vh;
-    animation: slideDown 0.3s ease-out;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: baseline;
-    align-content: center;
-    justify-content: space-between;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  body.menu-open {
-    overflow: hidden;
-  }
-}
-
-/* Móviles (hasta 600px) */
 @media (max-width: 600px) {
   header h1 {
     font-size: 1.1em;
   }
-
   header h2 {
     font-size: 0.95em;
   }
-
   nav ul {
     flex-direction: column;
     align-items: center;
     padding: 0;
   }
-
   nav ul li {
     margin: 8px 0;
   }
-
-  nav ul li a {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
   .bienvenida-section,
   .empresa-section {
     padding: 8px 1vw;
   }
-
   .bienvenida-texto h2 {
     font-size: 1.3em;
     padding-inline: 0;
   }
-
   .bienvenida-texto p {
     font-size: 1em;
-    padding: 15px;
+    padding: 15px ;
   }
-
   .carrusel img {
     border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    opacity: 1;
   }
 
   .empresa-texto h2 {
     font-size: 2.6em;
     padding-inline: 0;
   }
-
   .empresa-texto p {
     font-size: 1em;
-  }
-
-  .carrusel-flecha {
-    font-size: 1.3em;
-    padding: 0 7px;
-  }
-
-  .contacto-info h1 {
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .mensaje-principal h2 {
-    font-size: 1.4rem;
-    text-align: center;
-  }
-
-  .info-contacto {
-    gap: 15px;
-  }
-
-  .formulario-container {
-    padding: 30px 20px;
   }
 }
 
@@ -747,6 +583,26 @@ nav ul li a.current {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
+@media (max-width: 968px) {
+  .contacto-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-info,
+  .formulario-container {
+    padding: 40px 30px;
+  }
+
+  .contacto-whatsapp h2 {
+    font-size: 1.8rem;
+  }
+
+  .boton-whatsapp {
+    padding: 18px 30px;
+    font-size: 1.1rem;
+  }
+}
+
 .turismo-section {
   text-align: center;
   padding: 40px 20px;
@@ -914,6 +770,23 @@ nav ul li a.current {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .contacto-info h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .mensaje-principal h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .info-contacto {
+    gap: 15px;
+  }
+  .formulario-container {
+    padding: 30px 20px;
   }
 }
 
