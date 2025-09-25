@@ -1,204 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A&G TOURS | Vehículos de Transporte Turístico en Colombia</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="icon" href="img/logo.png" type="image/png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <!-- 🔹 META SEO -->
-    <meta
-      name="description"
-      content="Descubre la flota de vehículos de A&G TOURS: buses de turismo, vans ejecutivas, microbuses, camionetas y autos para transporte turístico y empresarial en Colombia."
-    />
-    <meta
-      name="keywords"
-      content="vehículos de turismo Colombia, alquiler de buses turísticos, vans ejecutivas Medellín, transporte empresarial Bogotá, microbuses turísticos Cartagena, carros turísticos Cali, transporte turístico Colombia, A&G TOURS vehículos"
-    />
-    <meta name="author" content="A&G TOURS" />
 
-    <!-- 🔹 OPEN GRAPH (para Facebook / WhatsApp / LinkedIn) -->
-    <meta
-      property="og:title"
-      content="A&G TOURS | Vehículos de Transporte Turístico en Colombia"
-    />
-    <meta
-      property="og:description"
-      content="Conoce nuestros vehículos: vans ejecutivas, buses de turismo, microbuses, autos y camionetas para viajes turísticos, familiares o empresariales en Colombia."
-    />
-    <meta
-      property="og:image"
-      content="https://tusitio.com/img/vehiculos/img/vehiculo1.jpg"
-    />
-    <meta property="og:url" content="https://tusitio.com/vehiculos" />
-    <meta property="og:type" content="website" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>A&G TOURS | Vehículos de Transporte Turístico en Colombia</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="img/logo.png" type="image/png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="description"
+    content="Descubre la flota de vehículos de A&G TOURS: buses de turismo, vans ejecutivas, microbuses, camionetas y autos para transporte turístico y empresarial en Colombia." />
+  <meta name="keywords"
+    content="vehículos de turismo Colombia, alquiler de buses turísticos, vans ejecutivas Medellín, transporte empresarial Bogotá, microbuses turísticos Cartagena, carros turísticos Cali, transporte turístico Colombia, A&G TOURS vehículos" />
+  <meta name="author" content="A&G TOURS" />
 
-    <!-- 🔹 TWITTER CARDS -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="A&G TOURS | Vehículos de Transporte Turístico en Colombia"
-    />
-    <meta
-      name="twitter:description"
-      content="Flota de buses, vans, autos y camionetas para transporte turístico y ejecutivo en Colombia con A&G TOURS."
-    />
-    <meta
-      name="twitter:image"
-      content="https://tusitio.com/img/vehiculos/img/vehiculo2.jpg"
-    />
-  </head>
+  <meta property="og:title" content="A&G TOURS | Vehículos de Transporte Turístico en Colombia" />
+  <meta property="og:description"
+    content="Conoce nuestros vehículos: vans ejecutivas, buses de turismo, microbuses, autos y camionetas para viajes turísticos, familiares o empresariales en Colombia." />
+  <meta property="og:image" content="https://tusitio.com/img/vehiculos/img/vehiculo1.jpg" />
+  <meta property="og:url" content="https://tusitio.com/vehiculos" />
+  <meta property="og:type" content="website" />
 
-  <body>
-    <header>
-      <div class="logo-container">
-        <img src="img/logo2.webp" alt="Logo A&G Tours" class="logo" />
-        <div class="titulo-header">
-          <h1><a href="/">A&G TOURS</a></h1>
-          <h2>Somos tu aliado en transporte y turismo</h2>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="A&G TOURS | Vehículos de Transporte Turístico en Colombia" />
+  <meta name="twitter:description"
+    content="Flota de buses, vans, autos y camionetas para transporte turístico y ejecutivo en Colombia con A&G TOURS." />
+  <meta name="twitter:image" content="https://tusitio.com/img/vehiculos/img/vehiculo2.jpg" />
+</head>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="img/logo2.webp" alt="Logo A&G Tours" class="logo" />
+      <div class="titulo-header">
+        <h1><a href="/">A&G TOURS</a></h1>
+        <h2>Somos tu aliado en transporte y turismo</h2>
+      </div>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+    <nav>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="nuestraempresa">Nuestra Empresa</a></li>
+        <li><a href="turismo">Turismo</a></li>
+        <li><a href="eventos">Eventos del mes</a></li>
+        <li><a href="vehiculos" class="current">Vehículos</a></li>
+        <li><a href="contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="vehiculos-section">
+    <h2>Nuestros Vehículos</h2>
+
+    <div class="vehiculo-carrusel">
+      <div class="slide active">
+        <img src="img/vehiculos/img/vehiculo1.webp" alt="Bus de turismo" />
+        <div class="descripcion">
+          <h3>Van Ejecutiva</h3>
+          <p>
+            Perfecta para grupos pequeños o traslados ejecutivos. Espaciosa,
+            cómoda y moderna. Capacidad de hasta 19 pasajeros con aire
+            acondicionado.
+          </p>
         </div>
       </div>
-      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
-      <nav>
-        <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="nuestraempresa">Nuestra Empresa</a></li>
-          <li><a href="turismo">Turismo</a></li>
-          <li><a href="eventos">Eventos del mes</a></li>
-          <li><a href="vehiculos" class="current">Vehículos</a></li>
-          <li><a href="contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main class="vehiculos-section">
-      <h2>Nuestros Vehículos</h2>
-
-      <div class="vehiculo-carrusel">
-        <div class="slide active">
-          <img src="img/vehiculos/img/vehiculo1.webp" alt="Bus de turismo" />
-          <div class="descripcion">
-            <h3>Van Ejecutiva</h3>
-            <p>
-              Perfecta para grupos pequeños o traslados ejecutivos. Espaciosa,
-              cómoda y moderna. Capacidad de hasta 19 pasajeros con aire
-              acondicionado.
-            </p>
-          </div>
+      <div class="slide">
+        <img src="img/vehiculos/img/vehiculo2.webp" alt="Bus de turismo" />
+        <div class="descripcion">
+          <h3>Carro Sedán</h3>
+          <p>
+            Ideal para traslados urbanos y viajes cortos. Capacidad de hasta 4
+            pasajeros, aire acondicionado y baúl para 2–3 maletas.
+          </p>
         </div>
-
-        <div class="slide">
-          <img src="img/vehiculos/img/vehiculo2.webp" alt="Bus de turismo" />
-          <div class="descripcion">
-            <h3>Carro Sedán</h3>
-            <p>
-              Ideal para traslados urbanos y viajes cortos. Capacidad de hasta 4
-              pasajeros, aire acondicionado y baúl para 2–3 maletas.
-            </p>
-          </div>
-        </div>
-
-        <div class="slide">
-          <img src="img/vehiculos/img/vehiculo3.webp" alt="Microbús" />
-          <div class="descripcion">
-            <h3>Bus de Turismo</h3>
-            <p>
-              Ideal para viajes largos en grupo. Capacidad de hasta 40 pasajeros
-              con aire acondicionado y asientos reclinables.
-            </p>
-          </div>
-        </div>
-
-        <div class="slide">
-          <img src="img/vehiculos/img/vehiculo4.webp" alt="Carro sedán" />
-          <div class="descripcion">
-            <h3>Microbús</h3>
-            <p>
-              Opción práctica y versátil para recorridos cortos. Capacidad de
-              hasta 23 pasajeros.
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <img
-            src="img/vehiculos/img/vehiculo5.webp"
-            alt="Hyundai H1 Van Ejecutiva"
-          />
-          <div class="descripcion">
-            <h3>Van Ejecutiva Hyundai H1</h3>
-            <p>
-              Ideal para traslados familiares, ejecutivos o grupos pequeños.
-              Capacidad de hasta 10 pasajeros, aire acondicionado, asientos
-              cómodos y amplio espacio para equipaje.
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <img
-            src="img/vehiculos/img/vehiculo6.webp"
-            alt="Microbús Renault Master"
-          />
-          <div class="descripcion">
-            <h3>Microbús Ejecutivo Renault Master</h3>
-            <p>
-              Una opción cómoda y segura para grupos medianos. Capacidad de
-              hasta 15 pasajeros, aire acondicionado, asientos ergonómicos y
-              amplio espacio para equipaje. Ideal para recorridos turísticos y
-              empresariales.
-            </p>
-          </div>
-        </div>
-        <div class="slide">
-          <img
-            src="img/vehiculos/img/vehiculo7.webp"
-            alt="Camioneta Renault Duster"
-          />
-          <div class="descripcion">
-            <h3>Camioneta Renault Duster</h3>
-            <p>
-              Una opción cómoda y segura para traslados urbanos o
-              intermunicipales. Capacidad de hasta 4 pasajeros, aire
-              acondicionado y baúl amplio para equipaje. Perfecta para viajes
-              familiares o ejecutivos.
-            </p>
-          </div>
-        </div>
-        
-
-        <!-- Botones flechas -->
-        <button class="carrusel-flecha izq">&#10094;</button>
-        <button class="carrusel-flecha der">&#10095;</button>
-
-        <!-- Indicadores -->
-        <div class="indicadores"></div>
       </div>
-      <section class="videos-vehiculos">
-        <h2><i class="fa-solid fa-video"></i> Nuestro manual de usuario</h3>
+
+      <div class="slide">
+        <img src="img/vehiculos/img/vehiculo3.webp" alt="Microbús" />
+        <div class="descripcion">
+          <h3>Bus de Turismo</h3>
+          <p>
+            Ideal para viajes largos en grupo. Capacidad de hasta 40 pasajeros
+            con aire acondicionado y asientos reclinables.
+          </p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="img/vehiculos/img/vehiculo4.webp" alt="Carro sedán" />
+        <div class="descripcion">
+          <h3>Microbús</h3>
+          <p>
+            Opción práctica y versátil para recorridos cortos. Capacidad de
+            hasta 23 pasajeros.
+          </p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/vehiculos/img/vehiculo5.webp" alt="Hyundai H1 Van Ejecutiva" />
+        <div class="descripcion">
+          <h3>Van Ejecutiva Hyundai H1</h3>
+          <p>
+            Ideal para traslados familiares, ejecutivos o grupos pequeños.
+            Capacidad de hasta 10 pasajeros, aire acondicionado, asientos
+            cómodos y amplio espacio para equipaje.
+          </p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/vehiculos/img/vehiculo6.webp" alt="Microbús Renault Master" />
+        <div class="descripcion">
+          <h3>Microbús Ejecutivo Renault Master</h3>
+          <p>
+            Una opción cómoda y segura para grupos medianos. Capacidad de
+            hasta 15 pasajeros, aire acondicionado, asientos ergonómicos y
+            amplio espacio para equipaje. Ideal para recorridos turísticos y
+            empresariales.
+          </p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/vehiculos/img/vehiculo7.webp" alt="Camioneta Renault Duster" />
+        <div class="descripcion">
+          <h3>Camioneta Renault Duster</h3>
+          <p>
+            Una opción cómoda y segura para traslados urbanos o
+            intermunicipales. Capacidad de hasta 4 pasajeros, aire
+            acondicionado y baúl amplio para equipaje. Perfecta para viajes
+            familiares o ejecutivos.
+          </p>
+        </div>
+      </div>
+
+
+      <button class="carrusel-flecha izq">&#10094;</button>
+      <button class="carrusel-flecha der">&#10095;</button>
+
+      <div class="indicadores"></div>
+    </div>
+    <section class="videos-vehiculos">
+      <h2><i class="fa-solid fa-video"></i> Nuestro manual de usuario</h2>
         <div class="videos-grid">
           <div class="video-card">
-            <iframe
-              width="560"
-              height="315"
-              src="https://drive.google.com/file/d/1HlKJrMNhcWjycf59KcXUMuIO2f7iH66K/preview"
-              title="Video de Evento"
+            <iframe width="560" height="315"
+              src="https://drive.google.com/file/d/1HlKJrMNhcWjycf59KcXUMuIO2f7iH66K/preview" title="Video de Evento"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            >
+              allowfullscreen>
             </iframe>
           </div>
         </div>
-      </section>
-    </main>
-    <button id="btnUp" title="Subir">
-      <i class="fa-solid fa-up-long"></i>
-    </button>
-    <script src="js/botonup.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/vehiculos.js"></script>
-  </body>
+    </section>
+  </main>
+  <button id="btnUp" title="Subir">
+    <i class="fa-solid fa-up-long"></i>
+  </button>
+  <script src="js/botonup.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/vehiculos.js"></script>
+</body>
+
 </html>
