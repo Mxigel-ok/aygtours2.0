@@ -307,11 +307,11 @@ nav ul li a.current {
 
 .menu-toggle {
   display: none;
-  position: fixed; /* Cambiado de absolute a fixed */
-  top: 20px; /* Ajustado para dar más espacio */
+  position: fixed;
+  top: 20px;
   right: 20px;
   z-index: 1002;
-  background: rgba(0, 80, 17, 0.9); /* Más opaco para mejor visibilidad */
+  background: rgba(0, 80, 17, 0.9);
   color: rgb(255, 255, 255);
   border: none;
   font-size: 2.2em;
@@ -319,7 +319,7 @@ nav ul li a.current {
   padding: 2px 14px 2px 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Añadido sombra */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .menu-toggle:hover {
@@ -332,7 +332,6 @@ nav ul li a.current {
   background: rgb(0, 80, 17);
 }
 
-/* Añadir efecto de desplazamiento suave */
 @keyframes menuToggleSlideIn {
   from {
     transform: translateY(-100%);
@@ -344,7 +343,6 @@ nav ul li a.current {
   }
 }
 
-/* Aplicar animación cuando el menú se muestra */
 @media (max-width: 700px) {
   .menu-toggle {
     display: block;
