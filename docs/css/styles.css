@@ -97,12 +97,12 @@ body {
 
 .bienvenida-section {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
   padding: 60px 5vw;
   background: rgba(0, 80, 17, 0.548);
   color: #fff;
-  align-items: center; 
+  align-items: center;
   min-height: 70vh;
 }
 
@@ -130,16 +130,16 @@ body {
 .bienvenida-section .carrusel {
   width: 100%;
   height: 100%;
-  max-width: none; 
+  max-width: none;
   border-radius: 40px;
-  margin: 0; 
-  box-shadow: none; 
+  margin: 0;
+  box-shadow: none;
 }
 
 .bienvenida-section .carrusel img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   display: block;
   opacity: 1;
 }
@@ -196,13 +196,13 @@ body {
   }
   .bienvenida-texto p {
     font-size: 1em;
-    padding: 15px ;
+    padding: 15px;
   }
   .carrusel img {
     border-radius: 8px;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     display: block;
     opacity: 1;
   }
@@ -319,7 +319,7 @@ nav ul li a.current {
   padding: 2px 14px 2px 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .menu-toggle:hover {
@@ -1054,9 +1054,8 @@ nav ul li a.current {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover; 
+  object-fit: cover;
 }
-
 
 .carruselsl .caption {
   position: absolute;
@@ -1065,12 +1064,7 @@ nav ul li a.current {
   right: 20px;
   color: #fff;
   text-align: left;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.4
-  ); 
+  background: rgba(0, 0, 0, 0.4);
   padding: 10px 15px;
   border-radius: 8px;
 }
@@ -1111,19 +1105,18 @@ nav ul li a.current {
   right: 10px;
 }
 
-
 @media (min-width: 769px) {
   .carruselsl picture,
   .carruselsl img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
   }
 }
 
 @media (max-width: 768px) {
   .carruselsl {
-    height: auto; 
+    height: auto;
   }
 
   .carruselsl picture,
@@ -1192,7 +1185,7 @@ a.servicio-card {
   font-weight: bold;
   border: none;
   outline: none;
-  background: #28a745; 
+  background: #28a745;
   color: white;
   cursor: pointer;
   padding: 15px 20px;
@@ -1203,7 +1196,7 @@ a.servicio-card {
 }
 
 #btnUp:hover {
-  opacity: 1; 
+  opacity: 1;
   transform: translateY(-50%) scale(1.1);
   background: #218838;
 }
@@ -1240,8 +1233,8 @@ a.servicio-card {
 
 .card img {
   width: 100%;
-  height: auto; 
-  object-fit: contain; 
+  height: auto;
+  object-fit: contain;
   border-radius: 12px;
   margin-bottom: 15px;
 }
@@ -1376,44 +1369,24 @@ a.servicio-card {
 
 .evento h4,
 .evento p {
+  color: #000;
   padding: 0 15px;
   margin: 10px 0;
 }
 
-.amor-y-amistad {
+.evento-fondo {
   background: linear-gradient(
-      rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.9)
+      rgba(255, 201, 157, 0.582),
+      rgba(255, 115, 0, 0.76)
     ),
-    url("../img/fondoeventos.jpeg");
+    url("../img/fondoeventos3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #000;
 }
 
-.eventos-page header {
-  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
-}
 
-.eventos-page nav ul li a.current {
-  color: #ff4747;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-}
-
-.floating-hearts {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.floating-hearts::before {
-  content: "❤";
-  position: absolute;
-  animation: float 6s infinite;
-  font-size: 20px;
-  color: rgba(255, 0, 0, 0.2);
-}
 
 @keyframes float {
   0% {
@@ -1447,7 +1420,7 @@ a.servicio-card {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: #ff0000;
+  background: #000000;
 }
 
 .timeline-item {
@@ -1460,7 +1433,7 @@ a.servicio-card {
   flex: 1;
   text-align: right;
   padding-right: 20px;
-  color: #ff0000;
+  color: #000000;
   font-weight: bold;
 }
 
@@ -1474,10 +1447,9 @@ a.servicio-card {
 }
 
 .timeline-item .content::before {
-  content: "❤";
+  content: "🎃";
   position: absolute;
   left: -25px;
-  color: #ff0000;
 }
 
 .plan-card {
@@ -1525,14 +1497,14 @@ a.servicio-card {
 
 nav ul li a[href="eventos"]:hover,
 nav ul li a[href="eventos"].current {
-  color: #ff4747;
+  color: #ff5e00;
   position: relative;
   padding-right: 25px;
 }
 
 nav ul li a[href="eventos"]:hover::after,
 nav ul li a[href="eventos"].current::after {
-  content: "❤";
+  content: "🎃";
   position: absolute;
   right: 0;
   top: 50%;
@@ -1584,10 +1556,10 @@ nav ul li a[href="eventos"].current::after {
 .video-card {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; 
+  padding-top: 56.25%;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .video-card iframe,
