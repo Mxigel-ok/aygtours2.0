@@ -1532,7 +1532,7 @@ nav ul li a[href="eventos"].current::after {
 .videos-eventos h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
-  color: #ff0000;
+  color: #000000;
 }
 
 .videos-vehiculos {
