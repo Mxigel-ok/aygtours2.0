@@ -1447,7 +1447,7 @@ a.servicio-card {
 }
 
 .timeline-item .content::before {
-  content: "🎃";
+  content: "📅";
   position: absolute;
   left: -25px;
 }
@@ -1497,14 +1497,14 @@ a.servicio-card {
 
 nav ul li a[href="eventos"]:hover,
 nav ul li a[href="eventos"].current {
-  color: #ff5e00;
+  color: rgb(1, 116, 26);
   position: relative;
   padding-right: 25px;
 }
 
 nav ul li a[href="eventos"]:hover::after,
 nav ul li a[href="eventos"].current::after {
-  content: "🎃";
+  content: "📅";
   position: absolute;
   right: 0;
   top: 50%;
